@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swco/checkout",
+	"title": "Swift Checkout",
+	"category": "widgets",
+	"icon": "cart",
+	"description": "Render the Swift Checkout form anywhere on this page.",
+	"textdomain": "swift-checkout-for-woocommerce",
+	"attributes": {
+		"extraClass": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"multiple": false
+	},
+	"editorScript": "file:./edit.js",
+	"render": "file:./render.php"
+}

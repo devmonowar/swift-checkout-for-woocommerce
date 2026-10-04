@@ -1,0 +1,21 @@
+{
+	"name": "Trust Builder",
+	"description": "Maximum reassurance: full extras, reviews, help line, two-column flow.",
+	"settings": {
+		"swco_landing": {
+			"layout": "two-column",
+			"show_image": "yes",
+			"show_qty": "yes",
+			"show_email": "yes",
+			"show_note": "yes",
+			"button_text": "Order With Confidence"
+		},
+		"swco_checkout": {
+			"layout": "two-column",
+			"skin": "dhaka",
+			"delivery_note": "Insured delivery with live tracking on every order",
+			"reviews_text": "4.9/5 from 8,000+ verified buyers",
+			"help_text": "Questions? Call us 9AM-9PM, 7 days a week"
+		}
+	}
+}

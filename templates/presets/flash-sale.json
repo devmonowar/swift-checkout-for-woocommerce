@@ -1,0 +1,21 @@
+{
+	"name": "Flash Sale",
+	"description": "Urgent look for campaigns: multi-step checkout, Dhaka skin, hurry-up delivery note.",
+	"settings": {
+		"swco_landing": {
+			"layout": "two-column",
+			"show_image": "yes",
+			"show_qty": "yes",
+			"show_email": "no",
+			"show_note": "no",
+			"button_text": "Grab Yours Now"
+		},
+		"swco_checkout": {
+			"layout": "multi-step",
+			"skin": "dhaka",
+			"delivery_note": "Hurry! Order in the next 3 hours for same-day dispatch in Dhaka",
+			"reviews_text": "2,500+ orders delivered this month",
+			"help_text": ""
+		}
+	}
+}

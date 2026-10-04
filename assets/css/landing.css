@@ -1,0 +1,139 @@
+/**
+ * Swift Checkout — landing order section styles (scoped, no !important).
+ */
+
+.swco-landing {
+	max-width: 560px;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+}
+
+.swco-landing-product {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	margin-bottom: 1.25rem;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px solid #f1f5f9;
+}
+
+.swco-landing-product img {
+	width: 96px;
+	height: 96px;
+	object-fit: cover;
+	border-radius: 12px;
+	border: 1px solid #e2e8f0;
+	box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.swco-landing-name {
+	margin: 0 0 0.25rem;
+	font-size: 1.15rem;
+}
+
+.swco-landing-price {
+	margin: 0;
+	font-weight: 700;
+	color: #0f766e;
+	font-size: 1.05rem;
+}
+
+.swco-landing-total-wrap {
+	margin: 0.4rem 0 0;
+	font-weight: 800;
+	font-size: 1.1rem;
+}
+
+.swco-landing-form p {
+	margin-bottom: 1rem;
+}
+
+.swco-landing-form label {
+	display: block;
+	margin-bottom: 0.3rem;
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+.swco-landing-form input[type="text"],
+.swco-landing-form input[type="tel"],
+.swco-landing-form input[type="email"],
+.swco-landing-form input[type="number"],
+.swco-landing-form textarea {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	min-height: 46px;
+	border-radius: 10px;
+	border-color: #cbd5e1;
+}
+
+.swco-landing-form input:focus,
+.swco-landing-form textarea:focus {
+	border-color: #0f766e;
+	box-shadow: 0 0 0 3px #f0fdfa;
+	outline: none;
+}
+
+.swco-landing-form .swco-hp {
+	position: absolute;
+	left: -9999px;
+}
+
+.swco-landing-btn {
+	width: 100%;
+	min-height: 52px;
+	font-size: 1.05rem;
+	font-weight: 800;
+	border-radius: 12px;
+	background: linear-gradient(180deg, #14b8a6, #0f766e);
+	border: 1px solid #0f766e;
+	color: #fff;
+	cursor: pointer;
+	box-shadow: 0 3px 10px rgba(15, 118, 110, 0.35);
+}
+
+.swco-landing-btn:hover {
+	background: #115e59;
+	border-color: #115e59;
+	color: #fff;
+}
+
+.swco-landing-success {
+	border: 1px solid currentColor;
+	border-radius: 10px;
+	padding: 1rem 1.25rem;
+}
+
+.swco-landing-error {
+	color: #b3261e;
+}
+
+/* Two-column: product left, form right (desktop). */
+.swco-landing-two-col {
+	max-width: 880px;
+}
+
+@media (min-width: 769px) {
+	.swco-landing-two-col .swco-landing-product,
+	.swco-landing-two-col .swco-landing-form {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.swco-landing-two-col .swco-landing-product {
+		width: 38%;
+		margin-right: 4%;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+
+	.swco-landing-two-col .swco-landing-form {
+		width: 57%;
+	}
+}

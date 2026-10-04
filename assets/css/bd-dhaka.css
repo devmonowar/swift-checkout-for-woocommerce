@@ -1,0 +1,195 @@
+/**
+ * Swift Checkout — "Dhaka" skin (BD market).
+ *
+ * Teal + slate, rounded cards, mobile-first. Loaded only when the
+ * Checkout → Skin setting is "Dhaka". Everything scoped under
+ * `.swco-checkout` — theme CSS never breaks, no `!important`.
+ */
+
+.swco-checkout {
+	--swco-bd: #0f766e;
+	--swco-bd-soft: #f0fdfa;
+	--swco-bd-line: #ccfbf1;
+	--swco-radius: 12px;
+}
+
+/* Section cards. */
+.swco-checkout .swco-form,
+.swco-checkout .swco-coupon,
+.swco-checkout .swco-summary .swco-cart,
+.swco-checkout .swco-summary .swco-payment,
+.swco-checkout.swco-one-col > .swco-cart,
+.swco-checkout.swco-one-col > .swco-payment {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: var(--swco-radius);
+	padding: 1.25rem;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+/* Inputs: tall, rounded, teal focus. */
+.swco-checkout .swco-form input[type="text"],
+.swco-checkout .swco-form input[type="email"],
+.swco-checkout .swco-form input[type="tel"],
+.swco-checkout .swco-form select,
+.swco-checkout .swco-form textarea,
+.swco-checkout .swco-coupon input[type="text"] {
+	min-height: 44px;
+	border-radius: 10px;
+	border-color: #cbd5e1;
+}
+
+.swco-checkout .swco-form input:focus,
+.swco-checkout .swco-form select:focus,
+.swco-checkout .swco-form textarea:focus,
+.swco-checkout .swco-coupon input:focus {
+	border-color: var(--swco-bd);
+	box-shadow: 0 0 0 3px var(--swco-bd-soft);
+	outline: none;
+}
+
+/* Place order: full-width teal. */
+.swco-checkout .swco-payment #place_order {
+	background: var(--swco-bd);
+	border-color: var(--swco-bd);
+	border-radius: 10px;
+	min-height: 48px;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.swco-checkout .swco-payment #place_order:hover {
+	background: #115e59;
+	border-color: #115e59;
+}
+
+/* Buy Now + bump checkbox accent. */
+.swco-checkout ~ .swco-buy-now,
+a.swco-buy-now {
+	background: var(--swco-bd);
+	border-color: var(--swco-bd);
+	border-radius: 10px;
+}
+
+.swco-bump {
+	border-color: var(--swco-bd-line);
+	background: var(--swco-bd-soft);
+	border-radius: var(--swco-radius);
+}
+
+.swco-bump-check {
+	accent-color: var(--swco-bd);
+	width: 1.1rem;
+	height: 1.1rem;
+}
+
+/* Multi-step current step in teal. */
+.swco-checkout .swco-step[aria-current="step"] {
+	border-color: var(--swco-bd);
+}
+
+.swco-checkout .swco-step[aria-current="step"] .swco-step-num {
+	background: var(--swco-bd);
+	color: #fff;
+}
+
+/* Product thumbnails show (reference parity, owner decision 2026-10-04).
+   Hide via Checkout → Cart columns if a store wants them off. */
+.swco-checkout .swco-col-thumb img {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 1px solid #e2e8f0;
+}
+
+/* Coupon row: input + button side by side. */
+.swco-checkout .swco-coupon .form-row-first {
+	float: left;
+	width: 68%;
+}
+
+.swco-checkout .swco-coupon .form-row-last {
+	float: right;
+	width: 30%;
+}
+
+.swco-checkout .swco-coupon::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.swco-checkout .swco-coupon .button {
+	width: 100%;
+	min-height: 44px;
+	border-radius: 10px;
+	background: #0f172a;
+	border-color: #0f172a;
+	font-weight: 700;
+}
+
+/* Totals. */
+.swco-checkout .swco-total th,
+.swco-checkout .swco-total td {
+	font-size: 1.05rem;
+	font-weight: 800;
+}
+
+/* Skin extras. */
+.swco-delivery-note {
+	background: var(--swco-bd-soft);
+	border: 1px solid var(--swco-bd-line);
+	border-radius: 10px;
+	padding: 0.65rem 0.85rem;
+	font-size: 12px;
+	line-height: 1.5;
+	color: #134e4a;
+	margin: 1rem 0 0;
+}
+
+.swco-reviews {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+	margin: 0.9rem 0 0;
+}
+
+.swco-help {
+	text-align: center;
+	font-size: 11px;
+	color: #64748b;
+	margin: 0.6rem 0 0;
+}
+
+/* Trust badges row. */
+.swco-trust {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.5rem;
+	margin: 1.25rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.swco-trust li {
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-radius: 10px;
+	padding: 0.6rem 0.4rem;
+	font-size: 11px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.35;
+}
+
+@media (max-width: 480px) {
+	.swco-checkout .swco-form,
+	.swco-checkout .swco-coupon,
+	.swco-checkout .swco-summary .swco-cart,
+	.swco-checkout .swco-summary .swco-payment,
+	.swco-checkout.swco-one-col > .swco-cart,
+	.swco-checkout.swco-one-col > .swco-payment {
+		padding: 1rem;
+	}
+}

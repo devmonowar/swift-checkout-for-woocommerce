@@ -1,0 +1,21 @@
+{
+	"name": "Quick Order",
+	"description": "Fastest form: no image, no quantity, name + mobile + address only.",
+	"settings": {
+		"swco_landing": {
+			"layout": "stacked",
+			"show_image": "no",
+			"show_qty": "no",
+			"show_email": "no",
+			"show_note": "no",
+			"button_text": "Order Now"
+		},
+		"swco_checkout": {
+			"layout": "one-column",
+			"skin": "default",
+			"delivery_note": "",
+			"reviews_text": "",
+			"help_text": ""
+		}
+	}
+}

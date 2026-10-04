@@ -1,0 +1,54 @@
+/**
+ * Swift Checkout — admin styles (scoped to our settings tab).
+ */
+
+.swco-wrap {
+	max-width: 960px;
+}
+
+.swco-wrap .swco-nav {
+	margin-bottom: 1.5rem;
+}
+
+.swco-fields-table {
+	max-width: 760px;
+}
+
+.swco-fields-table code {
+	font-size: 12px;
+	color: #646970;
+}
+
+.swco-booster-card {
+	max-width: 640px;
+	background: #fff;
+	border: 1px dashed #8c8f94;
+	border-radius: 8px;
+	padding: 1.25rem 1.5rem;
+}
+
+.swco-templates {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 1rem;
+	max-width: 960px;
+}
+
+.swco-template-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 8px;
+	padding: 1.25rem 1.5rem;
+}
+
+.swco-template-card h4 {
+	margin-top: 0;
+}
+
+.swco-booster-card h3 {
+	margin-top: 0;
+}
+
+.swco-shortcode-input {
+	font-family: monospace;
+}

@@ -1,0 +1,21 @@
+{
+	"name": "Minimal Clean",
+	"description": "Light and fast: stacked landing, theme-friendly checkout, one-column layout, no extras.",
+	"settings": {
+		"swco_landing": {
+			"layout": "stacked",
+			"show_image": "yes",
+			"show_qty": "yes",
+			"show_email": "no",
+			"show_note": "no",
+			"button_text": "Buy Now"
+		},
+		"swco_checkout": {
+			"layout": "one-column",
+			"skin": "default",
+			"delivery_note": "",
+			"reviews_text": "",
+			"help_text": ""
+		}
+	}
+}

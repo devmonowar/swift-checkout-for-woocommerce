@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "swco/landing",
+	"title": "Swift Landing Order",
+	"category": "widgets",
+	"icon": "cart",
+	"description": "Product summary with a direct order form for landing pages.",
+	"textdomain": "swift-checkout-for-woocommerce",
+	"attributes": {
+		"productId": {
+			"type": "number",
+			"default": 0
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Order Now"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./edit.js",
+	"render": "file:./render.php"
+}

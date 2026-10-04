@@ -1,0 +1,296 @@
+/**
+ * Swift Checkout — frontend styles (original design).
+ *
+ * Rules: every selector is scoped under `.swco-checkout` so theme CSS never
+ * breaks. No `!important`. One media query: below 768px everything stacks.
+ */
+
+.swco-checkout {
+	max-width: 1100px;
+	margin: 0 auto;
+	color: inherit;
+}
+
+/* Escape narrow theme containers (block themes honor .alignwide). */
+.swco-shortcode {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+/* Two-column shell. */
+.swco-checkout.swco-two-col {
+	display: flex;
+	gap: 2rem;
+	align-items: flex-start;
+}
+
+.swco-checkout .swco-left {
+	flex: 1 1 55%;
+	min-width: 0;
+}
+
+.swco-checkout .swco-right.swco-summary {
+	flex: 1 1 45%;
+	min-width: 0;
+}
+
+/* Section spacing. */
+.swco-checkout .swco-cart,
+.swco-checkout .swco-form,
+.swco-checkout .swco-coupon,
+.swco-checkout .swco-payment {
+	margin-bottom: 1.5rem;
+}
+
+/* Summary card on the right. */
+.swco-checkout .swco-summary .swco-cart,
+.swco-checkout .swco-summary .swco-payment {
+	background: rgba(0, 0, 0, 0.02);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	padding: 1.25rem;
+}
+
+/* Tidy headings inside our sections. */
+.swco-checkout h3 {
+	margin-top: 0;
+	font-size: 1.1rem;
+}
+
+/* Full-width form rows for the single stack. */
+.swco-checkout .swco-form .form-row {
+	margin-bottom: 1rem;
+}
+
+.swco-checkout .swco-form input[type="text"],
+.swco-checkout .swco-form input[type="email"],
+.swco-checkout .swco-form input[type="tel"],
+.swco-checkout .swco-form select,
+.swco-checkout .swco-form textarea {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+/* Order table fills its card. */
+.swco-checkout .swco-cart table.shop_table {
+	width: 100%;
+	border: 0;
+	margin: 0;
+}
+
+/* Place-order button takes the full row. */
+.swco-checkout .swco-payment #place_order {
+	width: 100%;
+}
+
+/* Buy Now button next to Add to Cart. */
+.swco-buy-now {
+	margin-left: 0.5rem;
+}
+
+/* Opt-in form. */
+.swco-optin {
+	max-width: 560px;
+	margin: 0 auto;
+}
+
+.swco-optin .swco-hp {
+	position: absolute;
+	left: -9999px;
+}
+
+.swco-optin-success {
+	border: 1px solid currentColor;
+	border-radius: 8px;
+	padding: 1rem 1.25rem;
+}
+
+.swco-optin-error {
+	color: #b3261e;
+}
+
+/* Multi-step layout. */
+.swco-steps {
+	display: flex;
+	gap: 0.5rem;
+	list-style: none;
+	margin: 0 0 1.5rem;
+	padding: 0;
+}
+
+.swco-step {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.6rem 0.8rem;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 8px;
+	opacity: 0.65;
+}
+
+.swco-step[aria-current="step"] {
+	opacity: 1;
+	border-color: currentColor;
+}
+
+.swco-step-num {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.08);
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.swco-step[aria-current="step"] .swco-step-num {
+	background: rgba(0, 0, 0, 0.16);
+}
+
+/* Panes stack without JS; JS activates one at a time. */
+.swco-multi.swco-js .swco-pane {
+	display: none;
+}
+
+.swco-multi.swco-js .swco-pane.swco-active {
+	display: block;
+}
+
+.swco-pane-nav {
+	margin: 1.5rem 0;
+	display: flex;
+	gap: 0.75rem;
+}
+
+.swco-pane-nav .swco-next {
+	margin-left: auto;
+}
+
+/* Order bump box. */
+.swco-bump {
+	border: 1px dashed rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+	padding: 1rem 1.25rem;
+	margin-bottom: 1.5rem;
+}
+
+.swco-bump-label {
+	display: flex;
+	gap: 0.75rem;
+	align-items: flex-start;
+	cursor: pointer;
+}
+
+.swco-bump-check {
+	margin-top: 0.3rem;
+}
+
+.swco-bump-text {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.swco-bump-price del {
+	opacity: 0.6;
+	margin-right: 0.4rem;
+}
+
+.swco-bump-desc {
+	font-size: 0.9em;
+	opacity: 0.8;
+}
+
+/* Shipping methods in the summary. */
+.swco-shipping-methods {
+	margin-top: 1.25rem;
+}
+
+.swco-shipping-methods h3 {
+	margin-top: 0;
+	font-size: 1rem;
+}
+
+.swco-shipping-methods ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.swco-shipping-methods li {
+	margin-bottom: 0.5rem;
+}
+
+.swco-shipping-methods label {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	cursor: pointer;
+}
+
+.swco-shipping-cost {
+	margin-left: auto;
+	font-weight: 700;
+}
+
+/* Sticky mobile order bar: hidden on desktop. */
+.swco-sticky-bar {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.swco-checkout {
+		padding-bottom: 76px;
+	}
+
+	.swco-sticky-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 999;
+		background: #fff;
+		border-top: 1px solid #e2e8f0;
+		padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom));
+		box-shadow: 0 -2px 12px rgba(15, 23, 42, 0.1);
+	}
+
+	.swco-sticky-total {
+		font-weight: 700;
+		font-size: 1.05rem;
+	}
+
+	.swco-sticky-btn {
+		flex: 1;
+		max-width: 240px;
+		min-height: 46px;
+		border-radius: 10px;
+		font-weight: 700;
+	}
+}
+
+/* Dim the cart while an AJAX update is in flight (toggled by frontend.js). */
+.swco-checkout .swco-cart.swco-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+@media (max-width: 768px) {
+	.swco-checkout.swco-two-col {
+		display: block;
+	}
+
+	.swco-checkout .swco-right.swco-summary {
+		margin-top: 1.5rem;
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "Gorgeous Landing (BD)",
+	"description": "Two-column landing with image, email + note fields, teal order button, and a matching Dhaka checkout.",
+	"settings": {
+		"swco_landing": {
+			"layout": "two-column",
+			"show_image": "yes",
+			"show_qty": "yes",
+			"show_email": "yes",
+			"show_note": "yes",
+			"button_text": "Order Now"
+		},
+		"swco_checkout": {
+			"skin": "dhaka",
+			"delivery_note": "Estimated delivery: Tomorrow by 9 PM - Dhaka",
+			"reviews_text": "10,000+ happy customers in Dhaka",
+			"help_text": "Need help? Call 09613-XXXXXX (9AM-9PM)"
+		}
+	}
+}
