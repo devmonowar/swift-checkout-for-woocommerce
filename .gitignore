@@ -1,0 +1,14 @@
+# Dependencies — installed, never committed.
+/vendor/
+node_modules/
+
+# Build output — the distributable is generated, not stored.
+*.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.log
