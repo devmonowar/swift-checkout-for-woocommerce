@@ -54,7 +54,7 @@ final class SwCo_Maps {
 			'swco-maps',
 			'https://maps.googleapis.com/maps/api/js?key=' . rawurlencode( $key ) . '&libraries=places&loading=async&callback=swcoMapsInit',
 			array(),
-			null,
+			SWCO_VERSION,
 			true
 		);
 		wp_add_inline_script( 'swco-maps', self::init_js(), 'before' );

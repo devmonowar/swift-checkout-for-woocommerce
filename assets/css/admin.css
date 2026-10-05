@@ -39,10 +39,114 @@
 	border: 1px solid #c3c4c7;
 	border-radius: 8px;
 	padding: 1.25rem 1.5rem;
+	overflow: hidden;
 }
 
 .swco-template-card h4 {
 	margin-top: 0;
+}
+
+/* Preview screenshot (optional templates/presets/previews/<slug>.png). */
+.swco-template-shot {
+	display: block;
+	width: calc(100% + 3rem);
+	max-width: none;
+	margin: -1.25rem -1.5rem 1rem;
+	border-bottom: 1px solid #dcdcde;
+}
+
+/* Auto wireframe mock when no screenshot exists. */
+.swco-template-mock {
+	display: block;
+	margin: -1.25rem -1.5rem 1rem;
+	padding: 1rem 1rem 0.75rem;
+	background: #f6f7f7;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.swco-mock-bar {
+	display: block;
+	height: 8px;
+	border-radius: 4px;
+	background: #dcdcde;
+	margin-bottom: 0.6rem;
+}
+
+.swco-mock-body {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.swco-mock-landing-stacked {
+	flex-direction: column;
+}
+
+.swco-mock-product {
+	display: block;
+	border-radius: 6px;
+	background: #c3c4c7;
+	min-height: 52px;
+}
+
+.swco-mock-landing-two-column .swco-mock-product {
+	flex: 0 0 38%;
+}
+
+.swco-mock-landing-stacked .swco-mock-product {
+	min-height: 40px;
+}
+
+.swco-mock-form {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	min-width: 0;
+}
+
+.swco-mock-form i {
+	display: block;
+	height: 10px;
+	border-radius: 5px;
+	background: #e5e5e5;
+}
+
+.swco-mock-form i:last-child {
+	background: #0f766e;
+	height: 16px;
+	border-radius: 8px;
+	margin-top: 0.15rem;
+}
+
+.swco-mock-skin-default .swco-mock-product {
+	background: #8c8f94;
+}
+
+.swco-mock-skin-dhaka .swco-mock-product {
+	background: linear-gradient(135deg, #14b8a6, #0f766e);
+}
+
+.swco-mock-skin-dhaka .swco-mock-form i:last-child {
+	background: linear-gradient(90deg, #14b8a6, #0f766e);
+}
+
+/* Layout pills under each card. */
+.swco-template-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	margin: 0.75rem 0 0;
+}
+
+.swco-tag {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 600;
+	background: #f0f0f1;
+	border: 1px solid #dcdcde;
+	border-radius: 999px;
+	padding: 0.15rem 0.6rem;
+	color: #3c434a;
 }
 
 .swco-booster-card h3 {

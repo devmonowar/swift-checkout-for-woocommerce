@@ -4,13 +4,18 @@
  * Teal + slate, rounded cards, mobile-first. Loaded only when the
  * Checkout → Skin setting is "Dhaka". Everything scoped under
  * `.swco-checkout` — theme CSS never breaks, no `!important`.
+ *
+ * Premium pass: layered shadows, sticky summary, payment-method cards,
+ * gradient place-order, stepped progress, polished bump + trust row.
  */
 
 .swco-checkout {
 	--swco-bd: #0f766e;
+	--swco-bd-dark: #115e59;
 	--swco-bd-soft: #f0fdfa;
 	--swco-bd-line: #ccfbf1;
-	--swco-radius: 12px;
+	--swco-radius: 14px;
+	--swco-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 /* Section cards. */
@@ -23,20 +28,41 @@
 	background: #fff;
 	border: 1px solid #e2e8f0;
 	border-radius: var(--swco-radius);
-	padding: 1.25rem;
-	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+	padding: 1.5rem;
+	box-shadow: var(--swco-shadow);
 }
 
-/* Inputs: tall, rounded, teal focus. */
+/* Section titles. */
+.swco-checkout h3 {
+	font-size: 1.05rem;
+	font-weight: 800;
+	letter-spacing: 0.01em;
+	padding-bottom: 0.6rem;
+	border-bottom: 2px solid var(--swco-bd-soft);
+	margin-bottom: 1.1rem;
+}
+
+/* Sticky summary column on desktop. */
+@media (min-width: 769px) {
+	.swco-checkout.swco-two-col .swco-right.swco-summary {
+		position: sticky;
+		top: 1rem;
+	}
+}
+
+/* Inputs: tall, soft, teal focus. */
 .swco-checkout .swco-form input[type="text"],
 .swco-checkout .swco-form input[type="email"],
 .swco-checkout .swco-form input[type="tel"],
 .swco-checkout .swco-form select,
 .swco-checkout .swco-form textarea,
 .swco-checkout .swco-coupon input[type="text"] {
-	min-height: 44px;
-	border-radius: 10px;
-	border-color: #cbd5e1;
+	min-height: 48px;
+	border-radius: 12px;
+	border: 1px solid #cbd5e1;
+	background: #f8fafc;
+	padding: 0.55rem 0.85rem;
+	font-size: 1rem;
 }
 
 .swco-checkout .swco-form input:focus,
@@ -44,48 +70,98 @@
 .swco-checkout .swco-form textarea:focus,
 .swco-checkout .swco-coupon input:focus {
 	border-color: var(--swco-bd);
-	box-shadow: 0 0 0 3px var(--swco-bd-soft);
+	background: #fff;
+	box-shadow: 0 0 0 4px var(--swco-bd-soft);
 	outline: none;
 }
 
-/* Place order: full-width teal. */
+.swco-checkout .swco-form label {
+	font-weight: 600;
+	font-size: 0.92rem;
+	color: #334155;
+}
+
+/* Place order: gradient CTA. */
 .swco-checkout .swco-payment #place_order {
-	background: var(--swco-bd);
+	background: linear-gradient(180deg, #14b8a6, var(--swco-bd));
 	border-color: var(--swco-bd);
-	border-radius: 10px;
-	min-height: 48px;
-	font-size: 1rem;
-	font-weight: 700;
+	border-radius: 12px;
+	min-height: 54px;
+	font-size: 1.05rem;
+	font-weight: 800;
+	box-shadow: 0 6px 18px rgba(15, 118, 110, 0.4);
+	transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .swco-checkout .swco-payment #place_order:hover {
-	background: #115e59;
-	border-color: #115e59;
+	background: var(--swco-bd-dark);
+	border-color: var(--swco-bd-dark);
+	box-shadow: 0 8px 22px rgba(15, 118, 110, 0.45);
 }
 
-/* Buy Now + bump checkbox accent. */
-.swco-checkout ~ .swco-buy-now,
-a.swco-buy-now {
-	background: var(--swco-bd);
+.swco-checkout .swco-payment #place_order:active {
+	transform: translateY(2px);
+	box-shadow: 0 2px 8px rgba(15, 118, 110, 0.35);
+}
+
+/* Payment methods as selectable cards. */
+.swco-checkout .swco-payment ul.wc_payment_methods {
+	list-style: none;
+	margin: 0 0 1.25rem;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.swco-checkout .swco-payment ul.wc_payment_methods li {
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	padding: 0.75rem 1rem;
+	background: #f8fafc;
+}
+
+.swco-checkout .swco-payment ul.wc_payment_methods li:has(input:checked) {
 	border-color: var(--swco-bd);
-	border-radius: 10px;
+	background: var(--swco-bd-soft);
+	box-shadow: 0 0 0 1px var(--swco-bd);
 }
 
+.swco-checkout .swco-payment ul.wc_payment_methods label {
+	font-weight: 700;
+	cursor: pointer;
+}
+
+/* Order bump: teal highlight card. */
 .swco-bump {
-	border-color: var(--swco-bd-line);
+	border: 1px solid var(--swco-bd-line);
+	border-left: 4px solid var(--swco-bd);
 	background: var(--swco-bd-soft);
 	border-radius: var(--swco-radius);
+	box-shadow: var(--swco-shadow);
 }
 
 .swco-bump-check {
 	accent-color: var(--swco-bd);
-	width: 1.1rem;
-	height: 1.1rem;
+	width: 1.25rem;
+	height: 1.25rem;
 }
 
-/* Multi-step current step in teal. */
+/* Multi-step progress. */
+.swco-checkout .swco-steps {
+	gap: 0.35rem;
+}
+
+.swco-checkout .swco-step {
+	border-radius: 999px;
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
 .swco-checkout .swco-step[aria-current="step"] {
 	border-color: var(--swco-bd);
+	background: var(--swco-bd-soft);
+	box-shadow: 0 0 0 1px var(--swco-bd);
 }
 
 .swco-checkout .swco-step[aria-current="step"] .swco-step-num {
@@ -96,11 +172,19 @@ a.swco-buy-now {
 /* Product thumbnails show (reference parity, owner decision 2026-10-04).
    Hide via Checkout → Cart columns if a store wants them off. */
 .swco-checkout .swco-col-thumb img {
-	width: 60px;
-	height: 60px;
+	width: 64px;
+	height: 64px;
 	object-fit: cover;
-	border-radius: 10px;
+	border-radius: 12px;
 	border: 1px solid #e2e8f0;
+	box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+/* Quantity stepper. */
+.swco-checkout .swco-cart .qty {
+	text-align: center;
+	border-radius: 10px;
+	min-height: 42px;
 }
 
 /* Coupon row: input + button side by side. */
@@ -122,42 +206,49 @@ a.swco-buy-now {
 
 .swco-checkout .swco-coupon .button {
 	width: 100%;
-	min-height: 44px;
-	border-radius: 10px;
+	min-height: 48px;
+	border-radius: 12px;
 	background: #0f172a;
 	border-color: #0f172a;
 	font-weight: 700;
 }
 
 /* Totals. */
+.swco-checkout .swco-cart table.shop_table tfoot th,
+.swco-checkout .swco-cart table.shop_table tfoot td {
+	border-top: 2px solid #e2e8f0;
+}
+
 .swco-checkout .swco-total th,
 .swco-checkout .swco-total td {
-	font-size: 1.05rem;
+	font-size: 1.15rem;
 	font-weight: 800;
+	color: var(--swco-bd-dark);
 }
 
 /* Skin extras. */
 .swco-delivery-note {
 	background: var(--swco-bd-soft);
 	border: 1px solid var(--swco-bd-line);
-	border-radius: 10px;
-	padding: 0.65rem 0.85rem;
-	font-size: 12px;
-	line-height: 1.5;
+	border-radius: 12px;
+	padding: 0.75rem 1rem;
+	font-size: 13px;
+	line-height: 1.55;
 	color: #134e4a;
-	margin: 1rem 0 0;
+	margin: 1.25rem 0 0;
 }
 
 .swco-reviews {
 	text-align: center;
-	font-size: 12px;
-	font-weight: 600;
-	margin: 0.9rem 0 0;
+	font-size: 13px;
+	font-weight: 700;
+	margin: 1rem 0 0;
+	color: #334155;
 }
 
 .swco-help {
 	text-align: center;
-	font-size: 11px;
+	font-size: 12px;
 	color: #64748b;
 	margin: 0.6rem 0 0;
 }
@@ -166,21 +257,23 @@ a.swco-buy-now {
 .swco-trust {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 0.5rem;
+	gap: 0.6rem;
 	margin: 1.25rem 0 0;
-	padding: 0;
+	padding: 1rem 0 0;
+	border-top: 1px solid #f1f5f9;
 	list-style: none;
 }
 
 .swco-trust li {
 	background: #f8fafc;
 	border: 1px solid #e2e8f0;
-	border-radius: 10px;
-	padding: 0.6rem 0.4rem;
+	border-radius: 12px;
+	padding: 0.7rem 0.4rem;
 	font-size: 11px;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: center;
 	line-height: 1.35;
+	color: #334155;
 }
 
 @media (max-width: 480px) {
@@ -190,6 +283,11 @@ a.swco-buy-now {
 	.swco-checkout .swco-summary .swco-payment,
 	.swco-checkout.swco-one-col > .swco-cart,
 	.swco-checkout.swco-one-col > .swco-payment {
-		padding: 1rem;
+		padding: 1.1rem;
+		border-radius: 12px;
+	}
+
+	.swco-trust {
+		grid-template-columns: 1fr 1fr;
 	}
 }

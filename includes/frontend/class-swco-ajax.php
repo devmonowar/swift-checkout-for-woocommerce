@@ -108,7 +108,7 @@ final class SwCo_Ajax {
 			wp_send_json_error( array( 'message' => __( 'Invalid nonce.', 'swift-checkout-for-woocommerce' ) ), 403 );
 			return;
 		}
-		$raw  = $_POST['coupon'] ?? '';
+		$raw  = $_POST['coupon'] ?? ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- nonce verified with check_ajax_referer() above; unslashed + sanitized on the next line.
 		$code = is_string( $raw ) ? sanitize_text_field( wp_unslash( $raw ) ) : '';
 		if ( '' === $code ) {
 			wp_send_json_error( array( 'message' => __( 'Invalid coupon.', 'swift-checkout-for-woocommerce' ) ) );

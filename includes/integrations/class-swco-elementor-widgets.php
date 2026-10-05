@@ -177,10 +177,11 @@ class SwCo_Elementor_Landing_Widget extends SwCo_Elementor_Base_Widget {
 	 */
 	protected function render(): void {
 		$settings = $this->get_settings_for_display();
+		$button   = isset( $settings['swco_button_text'] ) && is_string( $settings['swco_button_text'] ) ? sanitize_text_field( $settings['swco_button_text'] ) : '';
 		echo SwCo_Landing::shortcode( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- shortcode() escapes its own output.
 			array(
 				'id'     => absint( $settings['swco_product_id'] ?? 0 ),
-				'button' => $settings['swco_button_text'] ?? '',
+				'button' => $button, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- sanitize_text_field() above.
 			)
 		);
 	}

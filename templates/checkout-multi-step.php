@@ -9,6 +9,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+// phpcs:ignoreFile WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- file fires WooCommerce core hooks (required for checkout compatibility).
+
 $swco_checkout = isset( $checkout ) ? $checkout : null;
 
 do_action( 'woocommerce_before_checkout_form', $swco_checkout );

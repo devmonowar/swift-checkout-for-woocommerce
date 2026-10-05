@@ -100,20 +100,20 @@ final class SwCo_Settings {
 				'hide_shipping'    => 'yes',
 			),
 			'swco_fields'   => array(
-				'billing_first_name' => array( 'visible' => 1, 'required' => 1, 'order' => 10 ),
-				'billing_last_name'  => array( 'visible' => 1, 'required' => 1, 'order' => 20 ),
-				'billing_phone'      => array( 'visible' => 1, 'required' => 1, 'order' => 30 ),
-				'billing_country'    => array( 'visible' => 1, 'required' => 1, 'order' => 40 ),
-				'billing_address_1'  => array( 'visible' => 1, 'required' => 1, 'order' => 50 ),
-				'billing_city'       => array( 'visible' => 1, 'required' => 1, 'order' => 60 ),
-				'billing_postcode'   => array( 'visible' => 1, 'required' => 1, 'order' => 70 ),
-				'billing_company'    => array( 'visible' => 0, 'required' => 0, 'order' => 80 ),
-				'billing_address_2'  => array( 'visible' => 0, 'required' => 0, 'order' => 90 ),
-				'billing_division'   => array( 'visible' => 1, 'required' => 1, 'order' => 65 ),
-				'billing_district'   => array( 'visible' => 1, 'required' => 1, 'order' => 66 ),
-				'billing_thana'      => array( 'visible' => 1, 'required' => 1, 'order' => 67 ),
-				'billing_landmark'   => array( 'visible' => 1, 'required' => 0, 'order' => 68 ),
-				'order_comments'     => array( 'visible' => 0, 'required' => 0, 'order' => 100 ),
+				'billing_first_name' => array( 'label' => 'First name', 'visible' => 1, 'required' => 1, 'order' => 10 ),
+				'billing_last_name'  => array( 'label' => 'Last name', 'visible' => 1, 'required' => 1, 'order' => 20 ),
+				'billing_phone'      => array( 'label' => 'Phone', 'visible' => 1, 'required' => 1, 'order' => 30 ),
+				'billing_country'    => array( 'label' => 'Country', 'visible' => 1, 'required' => 1, 'order' => 40 ),
+				'billing_address_1'  => array( 'label' => 'Address', 'visible' => 1, 'required' => 1, 'order' => 50 ),
+				'billing_city'       => array( 'label' => 'City', 'visible' => 1, 'required' => 1, 'order' => 60 ),
+				'billing_postcode'   => array( 'label' => 'Postcode', 'visible' => 1, 'required' => 1, 'order' => 70 ),
+				'billing_company'    => array( 'label' => 'Company', 'visible' => 0, 'required' => 0, 'order' => 80 ),
+				'billing_address_2'  => array( 'label' => 'Address 2', 'visible' => 0, 'required' => 0, 'order' => 90 ),
+				'billing_division'   => array( 'label' => 'Division (BD)', 'visible' => 1, 'required' => 1, 'order' => 65 ),
+				'billing_district'   => array( 'label' => 'District (BD)', 'visible' => 1, 'required' => 1, 'order' => 66 ),
+				'billing_thana'      => array( 'label' => 'Thana / Area (BD)', 'visible' => 1, 'required' => 1, 'order' => 67 ),
+				'billing_landmark'   => array( 'label' => 'Landmark (BD)', 'visible' => 1, 'required' => 0, 'order' => 68 ),
+				'order_comments'     => array( 'label' => 'Order notes', 'visible' => 0, 'required' => 0, 'order' => 100 ),
 			),
 			'swco_coupon'   => array(
 				'auto_coupon'  => '',
@@ -144,6 +144,14 @@ final class SwCo_Settings {
 				'show_email'    => 'no',
 				'show_note'     => 'no',
 				'button_text'   => __( 'Order Now', 'swift-checkout-for-woocommerce' ),
+			),
+			'swco_landing_fields' => array(
+				'swco_name'    => array( 'label' => 'Your Name', 'required' => 1, 'order' => 10 ),
+				'swco_mobile'  => array( 'label' => 'Mobile Number', 'required' => 1, 'order' => 20 ),
+				'swco_address' => array( 'label' => 'Address', 'required' => 1, 'order' => 30 ),
+				'swco_email'   => array( 'label' => 'Email (optional)', 'required' => 0, 'order' => 40 ),
+				'swco_qty'     => array( 'label' => 'Quantity', 'required' => 0, 'order' => 50 ),
+				'swco_note'    => array( 'label' => 'Order Note (optional)', 'required' => 0, 'order' => 60 ),
 			),
 		);
 	}
@@ -282,7 +290,7 @@ final class SwCo_Settings {
 			}
 		}
 
-		// Fields (fixed 10 rows, add-new নয়).
+		// Fields (fixed rows: visible + required + order + custom label).
 		if ( isset( $input['swco_fields'] ) && is_array( $input['swco_fields'] ) ) {
 			foreach ( $output['swco_fields'] as $field_key => $row ) {
 				if ( ! isset( $input['swco_fields'][ $field_key ] ) || ! is_array( $input['swco_fields'][ $field_key ] ) ) {
@@ -297,6 +305,29 @@ final class SwCo_Settings {
 				}
 				if ( isset( $f['order'] ) ) {
 					$output['swco_fields'][ $field_key ]['order'] = absint( $f['order'] );
+				}
+				if ( isset( $f['label'] ) ) {
+					$output['swco_fields'][ $field_key ]['label'] = substr( $this->clean_text( $f['label'] ), 0, 100 );
+				}
+			}
+		}
+
+		// Landing form fields (fixed 6: custom label + required + order;
+		// visibility still follows the Landing tab show_* toggles).
+		if ( isset( $input['swco_landing_fields'] ) && is_array( $input['swco_landing_fields'] ) ) {
+			foreach ( $output['swco_landing_fields'] as $field_key => $row ) {
+				if ( ! isset( $input['swco_landing_fields'][ $field_key ] ) || ! is_array( $input['swco_landing_fields'][ $field_key ] ) ) {
+					continue;
+				}
+				$f = $input['swco_landing_fields'][ $field_key ];
+				if ( isset( $f['required'] ) ) {
+					$output['swco_landing_fields'][ $field_key ]['required'] = $f['required'] ? 1 : 0;
+				}
+				if ( isset( $f['order'] ) ) {
+					$output['swco_landing_fields'][ $field_key ]['order'] = absint( $f['order'] );
+				}
+				if ( isset( $f['label'] ) ) {
+					$output['swco_landing_fields'][ $field_key ]['label'] = substr( $this->clean_text( $f['label'] ), 0, 100 );
 				}
 			}
 		}

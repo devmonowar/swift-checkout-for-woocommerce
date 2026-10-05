@@ -47,8 +47,8 @@ final class SwCo_Coupon {
 			return '';
 		}
 		return function_exists( 'wc_format_coupon_code' )
-			? wc_format_coupon_code( sanitize_text_field( wp_unslash( $_GET[ $param ] ) ) )
-			: strtoupper( sanitize_text_field( wp_unslash( $_GET[ $param ] ) ) );
+			? wc_format_coupon_code( sanitize_text_field( wp_unslash( $_GET[ $param ] ) ) ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only coupon lookup; value sanitized here.
+			: strtoupper( sanitize_text_field( wp_unslash( $_GET[ $param ] ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only coupon lookup; value sanitized here.
 	}
 
 	/**

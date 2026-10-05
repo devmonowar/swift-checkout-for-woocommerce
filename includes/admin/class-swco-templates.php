@@ -33,7 +33,7 @@ final class SwCo_Templates {
 	/**
 	 * All valid presets, keyed by file slug.
 	 *
-	 * @return array Slug => ['name' => string, 'description' => string].
+	 * @return array Slug => ['name' => string, 'description' => string, ...].
 	 */
 	public static function list(): array {
 		$out   = array();
@@ -50,12 +50,37 @@ final class SwCo_Templates {
 			if ( ! is_array( $data ) || empty( $data['name'] ) || ! isset( $data['settings'] ) || ! is_array( $data['settings'] ) ) {
 				continue;
 			}
+			$settings = $data['settings'];
+			$landing  = isset( $settings['swco_landing']['layout'] ) && is_string( $settings['swco_landing']['layout'] ) ? $settings['swco_landing']['layout'] : '';
+			$checkout = isset( $settings['swco_checkout']['layout'] ) && is_string( $settings['swco_checkout']['layout'] ) ? $settings['swco_checkout']['layout'] : '';
+			$skin     = isset( $settings['swco_checkout']['skin'] ) && is_string( $settings['swco_checkout']['skin'] ) ? $settings['swco_checkout']['skin'] : '';
 			$out[ $slug ] = array(
 				'name'        => sanitize_text_field( $data['name'] ),
 				'description' => isset( $data['description'] ) && is_string( $data['description'] ) ? sanitize_text_field( $data['description'] ) : '',
+				'landing'     => in_array( $landing, array( 'stacked', 'two-column' ), true ) ? $landing : '',
+				'checkout'    => in_array( $checkout, array( 'one-column', 'two-column', 'multi-step' ), true ) ? $checkout : '',
+				'skin'        => in_array( $skin, array( 'default', 'dhaka' ), true ) ? $skin : '',
+				'preview'     => self::preview_url( $slug ),
 			);
 		}
 		return $out;
+	}
+
+	/**
+	 * Preview screenshot URL when the author dropped one in
+	 * templates/presets/previews/<slug>.png (800x600 recommended).
+	 *
+	 * @param string $slug Preset slug.
+	 * @return string Empty when no screenshot exists.
+	 */
+	public static function preview_url( string $slug ): string {
+		if ( '' === $slug || ! preg_match( '/^[a-z0-9-]+$/', $slug ) ) {
+			return '';
+		}
+		if ( ! file_exists( self::dir() . '/previews/' . $slug . '.png' ) ) {
+			return '';
+		}
+		return SWCO_URL . 'templates/presets/previews/' . $slug . '.png';
 	}
 
 	/**

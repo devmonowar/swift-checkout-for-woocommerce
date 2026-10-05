@@ -177,7 +177,7 @@ final class SwCo_Admin_Menu {
 			<?php elseif ( 'landing' === $tab ) : ?>
 				<form method="post" action="">
 					<?php wp_nonce_field( self::NONCE ); ?>
-					<?php self::render_landing( $settings['swco_landing'] ); ?>
+					<?php self::render_landing( $settings['swco_landing'], $settings['swco_landing_fields'] ); ?>
 					<p class="submit">
 						<button type="submit" name="swco_save" value="1" class="button button-primary"><?php echo esc_html__( 'Save changes', 'swift-checkout-for-woocommerce' ); ?></button>
 					</p>
@@ -444,11 +444,12 @@ final class SwCo_Admin_Menu {
 	}
 
 	/**
-	 * Landing tab: section display defaults.
+	 * Landing tab: section display defaults + form field editor.
 	 *
 	 * @param array $l Stored swco_landing values.
+	 * @param array $fields Stored swco_landing_fields rows.
 	 */
-	private static function render_landing( array $l ): void {
+	private static function render_landing( array $l, array $fields ): void {
 		?>
 		<h3><?php echo esc_html__( 'Landing Order Section', 'swift-checkout-for-woocommerce' ); ?></h3>
 		<p class="description"><?php echo esc_html__( 'Defaults for [swift_landing]. The shortcode button attribute still wins per use.', 'swift-checkout-for-woocommerce' ); ?></p>
@@ -474,6 +475,7 @@ final class SwCo_Admin_Menu {
 				<?php self::row_text( __( 'Default button text', 'swift-checkout-for-woocommerce' ), 'swco_landing', 'button_text', $l['button_text'] ?? '', '' ); ?>
 			</tbody>
 		</table>
+		<?php SwCo_Admin_Fields::render_landing_table( $fields ); ?>
 		<?php
 	}
 
@@ -491,10 +493,32 @@ final class SwCo_Admin_Menu {
 			<div class="swco-templates">
 				<?php foreach ( $templates as $slug => $template ) : ?>
 					<div class="swco-template-card">
+						<?php if ( '' !== $template['preview'] ) : ?>
+							<img class="swco-template-shot" src="<?php echo esc_url( $template['preview'] ); ?>" alt="" loading="lazy" />
+						<?php else : ?>
+							<div class="swco-template-mock swco-mock-skin-<?php echo esc_attr( $template['skin'] ); ?>" aria-hidden="true">
+								<span class="swco-mock-bar"></span>
+								<span class="swco-mock-body swco-mock-landing-<?php echo esc_attr( $template['landing'] ); ?>">
+									<span class="swco-mock-product"></span>
+									<span class="swco-mock-form"><i></i><i></i><i></i></span>
+								</span>
+							</div>
+						<?php endif; ?>
 						<h4><?php echo esc_html( $template['name'] ); ?></h4>
 						<?php if ( '' !== $template['description'] ) : ?>
 							<p class="description"><?php echo esc_html( $template['description'] ); ?></p>
 						<?php endif; ?>
+						<p class="swco-template-tags">
+							<?php if ( '' !== $template['skin'] ) : ?>
+								<span class="swco-tag"><?php echo esc_html( ucfirst( $template['skin'] ) ); ?></span>
+							<?php endif; ?>
+							<?php if ( '' !== $template['landing'] ) : ?>
+								<span class="swco-tag"><?php echo esc_html( ucwords( str_replace( '-', ' ', $template['landing'] ) ) ); ?> landing</span>
+							<?php endif; ?>
+							<?php if ( '' !== $template['checkout'] ) : ?>
+								<span class="swco-tag"><?php echo esc_html( ucwords( str_replace( '-', ' ', $template['checkout'] ) ) ); ?> checkout</span>
+							<?php endif; ?>
+						</p>
 						<form method="post" action="">
 							<?php wp_nonce_field( self::NONCE ); ?>
 							<input type="hidden" name="swco_template" value="<?php echo esc_attr( $slug ); ?>" />

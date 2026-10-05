@@ -106,7 +106,7 @@ final class SwCo_Redirect {
 	 * @return string
 	 */
 	public static function maybe_redirect_to_checkout( string $url ): string {
-		$raw        = $_REQUEST['add-to-cart'] ?? 0;
+		$raw        = $_REQUEST['add-to-cart'] ?? 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- read-only add-to-cart detection; absint() applied below.
 		$product_id = is_array( $raw ) ? 0 : absint( wp_unslash( $raw ) );
 		if ( self::should_skip( $product_id ) ) {
 			return self::get_target_url();
@@ -195,19 +195,32 @@ final class SwCo_Redirect {
 	 */
 	public static function render_single_buy_now(): void {
 		global $product;
-		if ( ! ( $product instanceof WC_Product ) || ! $product->is_type( 'simple' ) ) {
+		if ( ! ( $product instanceof WC_Product ) ) {
 			return;
 		}
-		$meta = get_post_meta( $product->get_id(), '_swco_quick_buy', true );
-		if ( 'no' === $meta ) {
+		if ( ! self::single_button_eligible( $product ) ) {
 			return;
 		}
 		echo self::get_buy_now_html( $product->get_id() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- already escaped.
 	}
 
 	/**
-	 * Replace single-product Add to Cart text for simple products only,
-	 * so "Select options" / "Read more" on other types never change.
+	 * May our dedicated Buy Now button print for this product?
+	 *
+	 * @param WC_Product $product Product in context.
+	 * @return bool
+	 */
+	private static function single_button_eligible( WC_Product $product ): bool {
+		if ( ! $product->is_type( 'simple' ) ) {
+			return false;
+		}
+		return 'no' !== get_post_meta( $product->get_id(), '_swco_quick_buy', true );
+	}
+
+	/**
+	 * Relabel single-product Add to Cart only when our dedicated button
+	 * is hidden (per-product 'no'), so shoppers never see two identical
+	 * "Buy Now" buttons side by side. Non-simple types never change.
 	 *
 	 * @param string $text Default button text.
 	 * @return string
@@ -217,20 +230,28 @@ final class SwCo_Redirect {
 		if ( ! self::enabled() ) {
 			return $text;
 		}
-		if ( $product instanceof WC_Product && $product->is_type( 'simple' ) ) {
+		if ( $product instanceof WC_Product && $product->is_type( 'simple' ) && ! self::single_button_eligible( $product ) ) {
 			return self::buy_now_label();
 		}
 		return $text;
 	}
 
 	/**
-	 * Same guard for loop/shop pages.
+	 * Loop/shop pages have no dedicated button, so simple products are
+	 * always relabeled there (skip-cart redirect still applies).
 	 *
 	 * @param string $text Default button text.
 	 * @return string
 	 */
 	public static function filter_loop_atc_text( string $text ): string {
-		return self::filter_single_atc_text( $text );
+		global $product;
+		if ( ! self::enabled() ) {
+			return $text;
+		}
+		if ( $product instanceof WC_Product && $product->is_type( 'simple' ) ) {
+			return self::buy_now_label();
+		}
+		return $text;
 	}
 
 	/**
@@ -299,7 +320,7 @@ final class SwCo_Redirect {
 			if ( ! isset( $_POST[ $key ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- nonce verified by WooCommerce on the product screen.
 				continue;
 			}
-			$value = sanitize_key( wp_unslash( $_POST[ $key ] ) );
+			$value = sanitize_key( wp_unslash( $_POST[ $key ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- nonce verified by WooCommerce on the product screen; value sanitized here.
 			if ( in_array( $value, $allowed, true ) ) {
 				update_post_meta( $post_id, $key, $value );
 			} else {

@@ -130,8 +130,8 @@ final class SwCo_Optin {
 	 * Handle the form POST (admin-post.php). Redirects back with a status.
 	 */
 	public static function handle_submit(): void {
-		$result = self::process( $_POST ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- verified inside process().
-		$back   = ! empty( $_POST['_wp_http_referer'] ) ? esc_url_raw( wp_unslash( $_POST['_wp_http_referer'] ) ) : home_url( '/' );
+		$result = self::process( $_POST ); // phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.MissingUnslash,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- nonce verified + values sanitized inside process().
+		$back   = ! empty( $_POST['_wp_http_referer'] ) ? esc_url_raw( wp_unslash( $_POST['_wp_http_referer'] ) ) : home_url( '/' ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- same submission already verified in process().
 		$back   = '' !== $back ? $back : home_url( '/' );
 		wp_safe_redirect( add_query_arg( 'swco_optin', $result, $back ) );
 		exit;

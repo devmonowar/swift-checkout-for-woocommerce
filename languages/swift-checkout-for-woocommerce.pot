@@ -1,950 +1,1147 @@
+# Copyright (C) 2026 Monowar Hossain
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Swift Checkout for WooCommerce 1.0.0\n"
+"Project-Id-Version: Swift Checkout for WooCommerce\n"
+"Report-Msgid-Bugs-To: https://github.com/devmonowar/swift-checkout-for-woocommerce/issues\n"
+"POT-Creation-Date: 2026-10-05 14:32+0000\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: includes/admin/class-swco-admin-fields.php:23
-msgid "First name"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:24
-msgid "Last name"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:25
-msgid "Phone"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:26
-msgid "Country"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:27 includes/frontend/class-swco-landing.php:209
-msgid "Address"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:28
-msgid "City"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:29
-msgid "Postcode"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:30
-msgid "Division (BD)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:31
-msgid "District (BD)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:32
-msgid "Thana / Area (BD)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:33
-msgid "Landmark (BD)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:34
-msgid "Company"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:35
-msgid "Address 2"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:36
-msgid "Order notes"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:48
-msgid "Checkout fields"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:49
-msgid "Hide, require, or reorder fields. Order = display priority (lower shows first)."
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:53
-msgid "Field"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:54
-msgid "Visible"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:55
-msgid "Required"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:56
-msgid "Order"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:57
-msgid "Move"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:65
-msgid "Show %s"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:66
-msgid "Require %s"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:69
-msgid "Move up"
-msgstr ""
-
-#: includes/admin/class-swco-admin-fields.php:70
-msgid "Move down"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:48
-msgid "Settings"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:62 includes/frontend/class-swco-redirect.php:244 includes/integrations/class-swco-elementor.php:46
-msgid "Swift Checkout"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:73
-msgid "General"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:74 includes/admin/class-swco-admin-menu.php:241 includes/frontend/class-swco-funnel.php:82
-msgid "Checkout"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:75
-msgid "Fields"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:76
-msgid "Booster"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:77
-msgid "Opt-in"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:78 includes/frontend/class-swco-funnel.php:81
-msgid "Landing"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:79
-msgid "Templates"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:112
-msgid "Copied!"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:113 includes/admin/class-swco-admin-menu.php:370
-msgid "Copy"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:123 includes/admin/class-swco-admin-menu.php:214
-msgid "You do not have permission to manage checkout settings."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:134
-msgid "Template applied. Previous settings backed up."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:136
-msgid "Invalid template."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:143
-msgid "Previous settings restored."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:145
-msgid "Nothing to restore."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:166 includes/admin/class-swco-admin-menu.php:174 includes/admin/class-swco-admin-menu.php:182 includes/admin/class-swco-admin-menu.php:200
-msgid "Save changes"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:219
-msgid "Settings saved."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:231
-msgid "Enable Swift Checkout"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:231
-msgid "Master switch. Off = everything behaves like default WooCommerce."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:232
-msgid "Skip cart globally"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:232
-msgid "Add to Cart goes straight to checkout. Per-product override wins."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:233
-msgid "Auto-create account on order"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:233
-msgid "Guest orders create (or link) a customer account from the billing email. WooCommerce emails the login details."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:236
-msgid "Redirect to"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:242
-msgid "Cart"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:243 includes/admin/class-swco-admin-menu.php:248
-msgid "Custom URL"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:248
-msgid "Used when Redirect to = Custom URL. Invalid URLs are rejected on save."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:251
-msgid "Replace cart URL"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:256
-msgid "No"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:257
-msgid "Redirect cart page to checkout"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:258
-msgid "Redirect cart page to Custom URL"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:263
-msgid "Buy Now button text"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:278 includes/admin/class-swco-admin-menu.php:459
-msgid "Layout"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:283
-msgid "Layout style"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:288
-msgid "One column (mobile-first)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:289
-msgid "Two columns (form + summary)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:290
-msgid "Multi-step (Details → Payment)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:292
-msgid "Live preview images arrive with the template design."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:297
-msgid "Skin"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:302
-msgid "Default (theme-friendly)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:303
-msgid "Dhaka — teal BD style + trust badges"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:308
-msgid "Delivery note (Dhaka skin)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:308
-msgid "E.g. Estimated delivery: Tomorrow — Dhaka. Empty = hidden."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:309
-msgid "Reviews line (Dhaka skin)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:309
-msgid "E.g. 10,000+ happy customers in Dhaka. Empty = hidden."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:310
-msgid "Help line (Dhaka skin)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:310
-msgid "E.g. Need help? Call 09613-XXXXXX (9AM–9PM). Empty = hidden."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:311
-msgid "Override global checkout"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:312
-msgid "Show cart in checkout"
+"PO-Revision-Date: 2026-10-05 14:32+0000\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Domain: swift-checkout-for-woocommerce\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/admin/class-swco-admin-menu.php:389
+msgid "0–90. Applied to the bump line in cart totals."
 msgstr ""
 
 #: includes/admin/class-swco-admin-menu.php:313
 msgid "AJAX quantity update"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:313
-msgid "Qty +/- and remove without page reload."
+#: includes/class-swco-settings.php:128
+msgid "Add this to your order"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:316
-msgid "Cart columns"
+#: includes/admin/class-swco-admin-menu.php:232
+msgid "Add to Cart goes straight to checkout. Per-product override wins."
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:321
-msgid "Remove"
+#: includes/admin/class-swco-admin-fields.php:28 includes/admin/class-swco-admin-fields.php:50 includes/frontend/class-swco-landing.php:232
+msgid "Address"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:322
-msgid "Thumbnail"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:323 includes/frontend/class-swco-optin.php:107
-msgid "Name"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:324
-msgid "Price"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:325 includes/frontend/class-swco-landing.php:220
-msgid "Quantity"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:327
-msgid "Product name always shows — a cart row without a name would be broken."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:330
-msgid "Hide order notes"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:333
-msgid "Coupon form"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:338 includes/frontend/class-swco-redirect.php:280
-msgid "Show"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:339 includes/frontend/class-swco-redirect.php:281
-msgid "Hide"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:340
-msgid "Toggle (collapsed)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:345
-msgid "Hide terms checkbox"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:346
-msgid "Hide shipping address"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:350
-msgid "Coupon"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:353
-msgid "Auto-apply coupon code"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:353
-msgid "Applied on every checkout. Saved in UPPERCASE."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:354
-msgid "URL param name"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:354
-msgid "E.g. SAVE10 via ?swco_coupon=SAVE10"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:355
-msgid "Minimum subtotal"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:355
-msgid "Auto-coupon applies only above this cart subtotal. 0 = always."
+#: includes/admin/class-swco-admin-fields.php:36
+msgid "Address 2"
 msgstr ""
 
 #: includes/admin/class-swco-admin-menu.php:359
 msgid "Address Autocomplete"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:360
-msgid "Paste your Google Places API key to suggest addresses on checkout. Shoppers need no key. Empty = feature off (no Google request). Tip: restrict the key to your domain in Google Cloud Console."
+#: includes/admin/class-swco-admin-menu.php:398
+msgid "After order summary"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:363
-msgid "Google Places API key"
+#: includes/admin/class-swco-admin-menu.php:353
+msgid "Applied on every checkout. Saved in UPPERCASE."
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:367
-msgid "Shortcode"
+#: includes/admin/class-swco-admin-menu.php:526
+msgid "Apply"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:372
-msgid "Place the checkout on any page. Buy Now buttons: [swift_buy_now id=\"123\"]. Landing order section: [swift_landing id=\"123\"]."
+#: includes/admin/class-swco-admin-menu.php:489
+msgid "Applying backs up your current settings first — restore anytime."
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:383
-msgid "Order Bump"
+#: includes/admin/class-swco-admin-menu.php:353
+msgid "Auto-apply coupon code"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:384
-msgid "Offer one fixed product with a checkbox on checkout. Simple products only."
+#: includes/admin/class-swco-admin-menu.php:355
+msgid "Auto-coupon applies only above this cart subtotal. 0 = always."
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:387
-msgid "Enable order bump"
+#: includes/admin/class-swco-admin-menu.php:233
+msgid "Auto-create account on order"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:388 includes/integrations/class-swco-elementor-widgets.php:33
-msgid "Product ID"
+#: templates/checkout-multi-step.php:77
+msgid "Back to details"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:388
-msgid "Simple, purchasable, in-stock product. 0 = off."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:389
-msgid "Discount %"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:389
-msgid "0–90. Applied to the bump line in cart totals."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:392
-msgid "Position"
+#: includes/frontend/class-swco-fields.php:160
+msgid "Barishal"
 msgstr ""
 
 #: includes/admin/class-swco-admin-menu.php:397
 msgid "Before payment"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:398
-msgid "After order summary"
+#: includes/frontend/class-swco-landing.php:142
+msgid "Benefit one — what problem does it solve?"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:403
-msgid "Box title"
+#: includes/frontend/class-swco-landing.php:142
+msgid "Benefit three — guarantee or delivery promise."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:142
+msgid "Benefit two — what makes it different?"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:76
+msgid "Booster"
 msgstr ""
 
 #: includes/admin/class-swco-admin-menu.php:404
 msgid "Box description"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:408
-msgid "Funnels (max 3 steps)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:409
-msgid "Landing → Checkout → Thank you. Link pages in a funnel; shoppers entering at the checkout page finish on your thank-you page."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:410
-msgid "Manage funnels"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:421
-msgid "Lead Opt-in"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:422
-msgid "Show [swift_optin] anywhere to collect names and emails. Leads stay private in wp-admin — no external service."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:425
-msgid "Enable opt-in form"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:426
-msgid "Form title"
+#: includes/admin/class-swco-admin-menu.php:403
+msgid "Box title"
 msgstr ""
 
 #: includes/admin/class-swco-admin-menu.php:427 includes/integrations/class-swco-elementor-widgets.php:50
 msgid "Button text"
 msgstr ""
 
-#: includes/admin/class-swco-admin-menu.php:428
-msgid "Success message"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:436
-msgid "Stored leads: %d"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:440
-msgid "View leads"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:441
-msgid "Copy shortcode"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:453
-msgid "Landing Order Section"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:454
-msgid "Defaults for [swift_landing]. The shortcode button attribute still wins per use."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:464
-msgid "Stacked (product, then form)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:465
-msgid "Two columns (product + form side by side)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:470
-msgid "Show product image"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:471
-msgid "Show quantity field"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:472
-msgid "Show email field (optional)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:472
-msgid "When filled, the order carries the email and account auto-link works."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:473
-msgid "Show order note field (optional)"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:474
-msgid "Default button text"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:486
-msgid "Design Templates"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:487
-msgid "Applying backs up your current settings first — restore anytime."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:489
-msgid "No templates found."
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:502
-msgid "Apply"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:513
-msgid "Restore previous settings"
-msgstr ""
-
-#: includes/admin/class-swco-admin-menu.php:537
-msgid "Enable"
-msgstr ""
-
 #: includes/class-swco-settings.php:84 includes/frontend/class-swco-redirect.php:148 includes/frontend/class-swco-redirect.php:149
 msgid "Buy Now"
 msgstr ""
 
-#: includes/class-swco-settings.php:128
-msgid "Add this to your order"
+#: includes/frontend/class-swco-redirect.php:298
+msgid "Buy Now button"
 msgstr ""
 
-#: includes/class-swco-settings.php:136
-msgid "Get 10% off your first order"
+#: includes/admin/class-swco-admin-menu.php:263
+msgid "Buy Now button text"
 msgstr ""
 
-#: includes/class-swco-settings.php:137 includes/frontend/class-swco-optin.php:88 includes/frontend/class-swco-optin.php:120
-msgid "Subscribe"
+#: includes/frontend/class-swco-landing.php:182
+msgid "Buyer name, Dhaka"
 msgstr ""
 
-#: includes/class-swco-settings.php:138 includes/frontend/class-swco-optin.php:95
-msgid "Thanks for subscribing!"
+#: includes/admin/class-swco-admin-menu.php:242
+msgid "Cart"
 msgstr ""
 
-#: includes/class-swco-settings.php:146 includes/frontend/class-swco-landing.php:169 includes/integrations/class-swco-elementor-widgets.php:172
-msgid "Order Now"
-msgstr ""
-
-#: includes/frontend/class-swco-accounts.php:74
-msgid "Customer account auto-created/linked by Swift Checkout."
-msgstr ""
-
-#: includes/frontend/class-swco-ajax.php:38 includes/frontend/class-swco-ajax.php:68 includes/frontend/class-swco-ajax.php:108 includes/frontend/class-swco-ajax.php:138 includes/frontend/class-swco-bump.php:171
-msgid "Invalid nonce."
-msgstr ""
-
-#: includes/frontend/class-swco-ajax.php:42 includes/frontend/class-swco-ajax.php:72 includes/frontend/class-swco-ajax.php:142
-msgid "Checkout tweaks are disabled."
-msgstr ""
-
-#: includes/frontend/class-swco-ajax.php:49
-msgid "Invalid quantity."
+#: includes/admin/class-swco-admin-menu.php:316
+msgid "Cart columns"
 msgstr ""
 
 #: includes/frontend/class-swco-ajax.php:53 includes/frontend/class-swco-ajax.php:82 includes/frontend/class-swco-ajax.php:118 includes/frontend/class-swco-ajax.php:146 includes/frontend/class-swco-bump.php:185
 msgid "Cart unavailable."
 msgstr ""
 
-#: includes/frontend/class-swco-ajax.php:78
-msgid "Invalid item."
-msgstr ""
-
-#: includes/frontend/class-swco-ajax.php:114
-msgid "Invalid coupon."
-msgstr ""
-
-#: includes/frontend/class-swco-bump.php:175
-msgid "Order bump is disabled."
-msgstr ""
-
-#: includes/frontend/class-swco-bump.php:181
-msgid "Invalid product."
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:50
-msgid "Shipping Method"
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:107
-msgid "Your cart is empty."
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:128
-msgid "Remove item"
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:138
-msgid "Decrease quantity"
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:140
-msgid "Increase quantity"
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:154
-msgid "Subtotal"
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:160
-msgid "Coupon: %s"
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:161
-msgid "Remove coupon"
-msgstr ""
-
-#: includes/frontend/class-swco-cart-tweaks.php:167
-msgid "Total"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:152
-msgid "Select division…"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:153
-msgid "Dhaka"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:154
-msgid "Chattogram"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:155
-msgid "Rajshahi"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:156
-msgid "Khulna"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:157
-msgid "Barishal"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:158
-msgid "Sylhet"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:159
-msgid "Rangpur"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:160
-msgid "Mymensingh"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:162
-msgid "Select district…"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:168 includes/frontend/class-swco-fields.php:254
-msgid "Division"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:175 includes/frontend/class-swco-fields.php:255
-msgid "District"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:182 includes/frontend/class-swco-fields.php:256
-msgid "Thana / Area"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:183
-msgid "e.g. Mirpur, Savar"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:188
-msgid "Landmark (optional)"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:189
-msgid "e.g. Near Central Mosque"
-msgstr ""
-
-#: includes/frontend/class-swco-fields.php:257
-msgid "Landmark"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:56
-msgid "Funnels"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:57
-msgid "Funnel"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:80
-msgid "— None —"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:83
-msgid "Thank you"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:94
-msgid "Use global layout"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:95
-msgid "One column"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:96
-msgid "Two columns"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:97
-msgid "Multi-step"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:107
-msgid "Funnel Steps (max 3)"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:126
-msgid "Link up to 3 pages: Landing (your content) → Checkout (with [swift_checkout]) → Thank you. Shoppers entering at the checkout page finish on your thank-you page."
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:130
-msgid "Step"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:131
-msgid "Type"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:132
-msgid "Page"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:133
-msgid "Layout (checkout only)"
-msgstr ""
-
-#: includes/frontend/class-swco-funnel.php:154
-msgid "— Select —"
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:118 includes/integrations/class-swco-elementor-widgets.php:157
-msgid "— Select product —"
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:181
-msgid "Thanks! Your order has been received. We will call you to confirm."
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:189
-msgid "Total:"
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:194
-msgid "Please fill in your name, a valid mobile number, and address."
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:201
-msgid "Your Name"
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:205
-msgid "Mobile Number"
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:214
-msgid "Email (optional)"
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:226
-msgid "Order Note (optional)"
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:231 includes/frontend/class-swco-optin.php:115
-msgid "Leave this empty"
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:312
-msgid "Landing page order (Swift Checkout)."
-msgstr ""
-
-#: includes/frontend/class-swco-landing.php:318
-msgid "Landing page COD order."
-msgstr ""
-
-#: includes/frontend/class-swco-layout.php:93
-msgid "Your cart is currently empty."
-msgstr ""
-
-#: includes/frontend/class-swco-layout.php:95
-msgid "Return to shop"
-msgstr ""
-
 #: includes/frontend/class-swco-layout.php:150
 msgid "Cash on Delivery"
 msgstr ""
 
-#: includes/frontend/class-swco-layout.php:151
-msgid "Fast Delivery in Dhaka"
+#: includes/frontend/class-swco-landing.php:325
+msgid "Cash on Delivery available — no advance payment needed."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:180
+msgid "Cash on Delivery — pay after checking the product."
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:157
+msgid "Chattogram"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:74 includes/admin/class-swco-admin-menu.php:241 includes/frontend/class-swco-funnel.php:82
+msgid "Checkout"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:65
+msgid "Checkout fields"
+msgstr ""
+
+#: templates/checkout-multi-step.php:23
+msgid "Checkout steps"
+msgstr ""
+
+#: includes/frontend/class-swco-ajax.php:42 includes/frontend/class-swco-ajax.php:72 includes/frontend/class-swco-ajax.php:142
+msgid "Checkout tweaks are disabled."
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:29
+msgid "City"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:183
+msgid "Common questions"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:35
+msgid "Company"
+msgstr ""
+
+#: templates/checkout-multi-step.php:64
+msgid "Continue to payment"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:112
+msgid "Copied!"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:107 includes/admin/class-swco-admin-fields.php:159 includes/admin/class-swco-admin-menu.php:113 includes/admin/class-swco-admin-menu.php:370
+msgid "Copy"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:441
+msgid "Copy shortcode"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:27
+msgid "Country"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:350
+msgid "Coupon"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:333
+msgid "Coupon form"
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:164
+msgid "Coupon: %s"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:243 includes/admin/class-swco-admin-menu.php:248
+msgid "Custom URL"
+msgstr ""
+
+#: includes/frontend/class-swco-accounts.php:74
+msgid "Customer account auto-created/linked by Swift Checkout."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:181
+msgid "Customer reviews"
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:140
+msgid "Decrease quantity"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:302
+msgid "Default (theme-friendly)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:475
+msgid "Default button text"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:455
+msgid "Defaults for [swift_landing]. The shortcode button attribute still wins per use."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:308
+msgid "Delivery note (Dhaka skin)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:488
+msgid "Design Templates"
+msgstr ""
+
+#: templates/checkout-multi-step.php:26
+msgid "Details"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:156
+msgid "Dhaka"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:303
+msgid "Dhaka — teal BD style + trust badges"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:389
+msgid "Discount %"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:178 includes/frontend/class-swco-fields.php:260
+msgid "District"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:32
+msgid "District (BD)"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:171 includes/frontend/class-swco-fields.php:259
+msgid "Division"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:31
+msgid "Division (BD)"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:184
+msgid "Do you deliver outside Dhaka?"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:309
+msgid "E.g. 10,000+ happy customers in Dhaka. Empty = hidden."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:308
+msgid "E.g. Estimated delivery: Tomorrow — Dhaka. Empty = hidden."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:310
+msgid "E.g. Need help? Call 09613-XXXXXX (9AM–9PM). Empty = hidden."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:354
+msgid "E.g. SAVE10 via ?swco_coupon=SAVE10"
 msgstr ""
 
 #: includes/frontend/class-swco-layout.php:152
 msgid "Easy 7-day Return"
 msgstr ""
 
-#: includes/frontend/class-swco-layout.php:169
-msgid "Place Order"
-msgstr ""
-
-#: includes/frontend/class-swco-optin.php:58
-msgid "Leads"
-msgstr ""
-
-#: includes/frontend/class-swco-optin.php:59
-msgid "Lead"
-msgstr ""
-
-#: includes/frontend/class-swco-optin.php:101
-msgid "Please enter a valid name and email."
+#: includes/frontend/class-swco-landing.php:180
+msgid "Easy support on phone and WhatsApp."
 msgstr ""
 
 #: includes/frontend/class-swco-optin.php:111
 msgid "Email"
 msgstr ""
 
-#: includes/frontend/class-swco-redirect.php:265
-msgid "Skip cart"
+#: includes/admin/class-swco-admin-fields.php:51 includes/frontend/class-swco-landing.php:233
+msgid "Email (optional)"
 msgstr ""
 
-#: includes/frontend/class-swco-redirect.php:267 includes/frontend/class-swco-redirect.php:279
-msgid "Use global setting"
+#: includes/admin/class-swco-admin-menu.php:561
+msgid "Enable"
 msgstr ""
 
-#: includes/frontend/class-swco-redirect.php:268
-msgid "Yes — go straight to checkout"
+#: includes/admin/class-swco-admin-menu.php:231
+msgid "Enable Swift Checkout"
 msgstr ""
 
-#: includes/frontend/class-swco-redirect.php:269
+#: includes/admin/class-swco-admin-menu.php:425
+msgid "Enable opt-in form"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:387
+msgid "Enable order bump"
+msgstr ""
+
+#: includes/frontend/class-swco-layout.php:151
+msgid "Fast Delivery in Dhaka"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:180
+msgid "Fast delivery all over Bangladesh."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:176
+msgid "Feature one + one-line benefit."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:176
+msgid "Feature three + one-line benefit."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:176
+msgid "Feature two + one-line benefit."
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:70 includes/admin/class-swco-admin-fields.php:126
+msgid "Field"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:75
+msgid "Fields"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:185
+msgid "Fill the form below to order"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:24
+msgid "First name"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:426
+msgid "Form title"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:57
+msgid "Funnel"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:107
+msgid "Funnel Steps (max 3)"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:56
+msgid "Funnels"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:408
+msgid "Funnels (max 3 steps)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:73
+msgid "General"
+msgstr ""
+
+#: includes/class-swco-settings.php:136
+msgid "Get 10% off your first order"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:363
+msgid "Google Places API key"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:233
+msgid "Guest orders create (or link) a customer account from the billing email. WooCommerce emails the login details."
+msgstr ""
+
+#: templates/checkout-multi-step.php:49 templates/checkout-one-column.php:44 templates/checkout-two-column.php:38
+msgid "Have a coupon? Click here to enter your code"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:310
+msgid "Help line (Dhaka skin)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:339 includes/frontend/class-swco-redirect.php:302
+msgid "Hide"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:330
+msgid "Hide order notes"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:346
+msgid "Hide shipping address"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:345
+msgid "Hide terms checkbox"
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:142
+msgid "Increase quantity"
+msgstr ""
+
+#: includes/frontend/class-swco-ajax.php:114
+msgid "Invalid coupon."
+msgstr ""
+
+#: includes/frontend/class-swco-ajax.php:78
+msgid "Invalid item."
+msgstr ""
+
+#: includes/frontend/class-swco-ajax.php:38 includes/frontend/class-swco-ajax.php:68 includes/frontend/class-swco-ajax.php:108 includes/frontend/class-swco-ajax.php:138 includes/frontend/class-swco-bump.php:171
+msgid "Invalid nonce."
+msgstr ""
+
+#: includes/frontend/class-swco-bump.php:181
+msgid "Invalid product."
+msgstr ""
+
+#: includes/frontend/class-swco-ajax.php:49
+msgid "Invalid quantity."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:136
+msgid "Invalid template."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:184
+msgid "Is Cash on Delivery available?"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:171
+msgid "Is this problem yours too?"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:159
+msgid "Khulna"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:71 includes/admin/class-swco-admin-fields.php:127
+msgid "Label"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:84 includes/admin/class-swco-admin-fields.php:139
+msgid "Label for %s"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:78 includes/frontend/class-swco-funnel.php:81
+msgid "Landing"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:454
+msgid "Landing Order Section"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:121
+msgid "Landing form fields"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:464
+msgid "Landing page COD order."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:458
+msgid "Landing page order (Swift Checkout)."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:409
+msgid "Landing → Checkout → Thank you. Link pages in a funnel; shoppers entering at the checkout page finish on your thank-you page."
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:262
+msgid "Landmark"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:34
+msgid "Landmark (BD)"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:191
+msgid "Landmark (optional)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:25
+msgid "Last name"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:278 includes/admin/class-swco-admin-menu.php:460
+msgid "Layout"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:133
+msgid "Layout (checkout only)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:283
+msgid "Layout style"
+msgstr ""
+
+#: includes/frontend/class-swco-optin.php:59
+msgid "Lead"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:421
+msgid "Lead Opt-in"
+msgstr ""
+
+#: includes/frontend/class-swco-optin.php:58
+msgid "Leads"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:318 includes/frontend/class-swco-optin.php:115
+msgid "Leave this empty"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:126
+msgid "Link up to 3 pages: Landing (your content) → Checkout (with [swift_checkout]) → Thank you. Shoppers entering at the checkout page finish on your thank-you page."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:292
+msgid "Live preview images arrive with the template design."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:150
+msgid "Long-form BD campaign page: offer bar, hero, problems, features, specs, reviews, FAQ, order form."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:410
+msgid "Manage funnels"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:231
+msgid "Master switch. Off = everything behaves like default WooCommerce."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:355
+msgid "Minimum subtotal"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:49 includes/frontend/class-swco-landing.php:231
+msgid "Mobile Number"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:75 includes/admin/class-swco-admin-fields.php:130
+msgid "Move"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:98 includes/admin/class-swco-admin-fields.php:150
+msgid "Move down"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:97 includes/admin/class-swco-admin-fields.php:149
+msgid "Move up"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:97
+msgid "Multi-step"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:290
+msgid "Multi-step (Details → Payment)"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:163
+msgid "Mymensingh"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:323 includes/frontend/class-swco-optin.php:107
+msgid "Name"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:256
+msgid "No"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:491
+msgid "No templates found."
+msgstr ""
+
+#: includes/frontend/class-swco-redirect.php:290
 msgid "No — keep cart for this product"
 msgstr ""
 
-#: includes/frontend/class-swco-redirect.php:277
-msgid "Buy Now button"
+#: includes/admin/class-swco-admin-menu.php:145
+msgid "Nothing to restore."
 msgstr ""
 
-#: includes/integrations/class-swco-elementor-widgets.php:78
-msgid "Swift Checkout Form"
+#: includes/admin/class-swco-admin-menu.php:384
+msgid "Offer one fixed product with a checkbox on checkout. Simple products only."
 msgstr ""
 
-#: includes/integrations/class-swco-elementor-widgets.php:132
-msgid "Swift Landing Order"
+#: includes/frontend/class-swco-funnel.php:95
+msgid "One column"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:288
+msgid "One column (mobile-first)"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:139
+msgid "One line that makes them want it. Cash on Delivery available."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:77
+msgid "Opt-in"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:74 includes/admin/class-swco-admin-fields.php:129
+msgid "Order"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:383
+msgid "Order Bump"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:53 includes/frontend/class-swco-landing.php:235
+msgid "Order Note (optional)"
+msgstr ""
+
+#: includes/class-swco-settings.php:146 includes/frontend/class-swco-landing.php:170 includes/frontend/class-swco-landing.php:285 includes/integrations/class-swco-elementor-widgets.php:172
+msgid "Order Now"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:143
+msgid "Order above — it takes less than a minute. We call to confirm every order."
+msgstr ""
+
+#: includes/frontend/class-swco-bump.php:175
+msgid "Order bump is disabled."
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:37
+msgid "Order notes"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:311
+msgid "Override global checkout"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:132
+msgid "Page"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:360
+msgid "Paste your Google Places API key to suggest addresses on checkout. Shoppers need no key. Empty = feature off (no Google request). Tip: restrict the key to your domain in Google Cloud Console."
+msgstr ""
+
+#: templates/checkout-multi-step.php:30
+msgid "Payment"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:26
+msgid "Phone"
+msgstr ""
+
+#: includes/frontend/class-swco-layout.php:169
+msgid "Place Order"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:372
+msgid "Place the checkout on any page. Buy Now buttons: [swift_buy_now id=\"123\"]. Landing order section: [swift_landing id=\"123\"]."
+msgstr ""
+
+#: includes/frontend/class-swco-optin.php:101
+msgid "Please enter a valid name and email."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:308
+msgid "Please fill in your name, a valid mobile number, and address."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:392
+msgid "Position"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:30
+msgid "Postcode"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:143
+msgid "Previous settings restored."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:324
+msgid "Price"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:172
+msgid "Problem one your buyers feel daily."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:172
+msgid "Problem three your product removes."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:172
+msgid "Problem two that wastes their time or money."
 msgstr ""
 
 #: includes/integrations/class-swco-elementor-widgets.php:166
 msgid "Product"
 msgstr ""
 
-#: includes/integrations/class-swco-elementor-widgets.php:209
+#: includes/admin/class-swco-admin-menu.php:388 includes/integrations/class-swco-elementor-widgets.php:33
+msgid "Product ID"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:327
+msgid "Product name always shows — a cart row without a name would be broken."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:313
+msgid "Qty +/- and remove without page reload."
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:52 includes/admin/class-swco-admin-menu.php:325 includes/frontend/class-swco-landing.php:234
+msgid "Quantity"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:158
+msgid "Rajshahi"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:162
+msgid "Rangpur"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:258
+msgid "Redirect cart page to Custom URL"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:257
+msgid "Redirect cart page to checkout"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:236
+msgid "Redirect to"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:169
+msgid "Regular price CUT — campaign price + delivery note here."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:321
+msgid "Remove"
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:166
+msgid "Remove coupon"
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:130
+msgid "Remove item"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:66
+msgid "Rename labels, hide, require, or reorder fields. Order = display priority (lower shows first)."
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:122
+msgid "Rename labels, require, or reorder the landing form. Visibility follows the toggles above."
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:160
+msgid "Replace 123 with the product ID."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:251
+msgid "Replace cart URL"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:182
+msgid "Replace with a real review from your first buyer."
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:88 includes/admin/class-swco-admin-fields.php:141
+msgid "Require %s"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:73 includes/admin/class-swco-admin-fields.php:128
+msgid "Required"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:537
+msgid "Restore previous settings"
+msgstr ""
+
+#: includes/frontend/class-swco-layout.php:95
+msgid "Return to shop"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:309
+msgid "Reviews line (Dhaka skin)"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:166
+msgid "SPECIAL OFFER — Cash on Delivery available"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:166 includes/admin/class-swco-admin-menu.php:174 includes/admin/class-swco-admin-menu.php:182 includes/admin/class-swco-admin-menu.php:200
+msgid "Save changes"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:165
+msgid "Select district…"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:155
+msgid "Select division…"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:48
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:219
+msgid "Settings saved."
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:52
+msgid "Shipping Method"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:174
+msgid "Short paragraph: how your product solves the problems above, in plain words."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:367
+msgid "Shortcode"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:105 includes/admin/class-swco-admin-fields.php:157
+msgid "Shortcode:"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:338 includes/frontend/class-swco-redirect.php:301
+msgid "Show"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:86
+msgid "Show %s"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:422
+msgid "Show [swift_optin] anywhere to collect names and emails. Leads stay private in wp-admin — no external service."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:312
+msgid "Show cart in checkout"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:473
+msgid "Show email field (optional)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:474
+msgid "Show order note field (optional)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:471
+msgid "Show product image"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:472
+msgid "Show quantity field"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:388
+msgid "Simple, purchasable, in-stock product. 0 = off."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:136
+msgid "Single-product sales page: hero, benefits, order form, trust points. One page, order completes here."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:178
+msgid "Size / material / battery / warranty — one line each, keep it scannable."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:297
+msgid "Skin"
+msgstr ""
+
+#: includes/frontend/class-swco-redirect.php:286
+msgid "Skip cart"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:232
+msgid "Skip cart globally"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:177
+msgid "Specifications"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:465
+msgid "Stacked (product, then form)"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:130
+msgid "Step"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:436
+msgid "Stored leads: %d"
+msgstr ""
+
+#: includes/class-swco-settings.php:137 includes/frontend/class-swco-optin.php:88 includes/frontend/class-swco-optin.php:120
+msgid "Subscribe"
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:156
+msgid "Subtotal"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:428
+msgid "Success message"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:149
+msgid "Swift BD Long Sales Page"
+msgstr ""
+
+#: includes/integrations/class-swco-elementor-widgets.php:210
 msgid "Swift Buy Now Button"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:62 includes/frontend/class-swco-redirect.php:265 includes/integrations/class-swco-elementor.php:46
+msgid "Swift Checkout"
+msgstr ""
+
+#: includes/integrations/class-swco-elementor-widgets.php:78
+msgid "Swift Checkout Form"
 msgstr ""
 
 #: swift-checkout-for-woocommerce.php:69
 msgid "Swift Checkout requires WooCommerce to be installed and active."
 msgstr ""
 
-#: templates/checkout-multi-step.php:21
-msgid "Checkout steps"
+#: includes/integrations/class-swco-elementor-widgets.php:132
+msgid "Swift Landing Order"
 msgstr ""
 
-#: templates/checkout-multi-step.php:24
-msgid "Details"
+#: includes/frontend/class-swco-landing.php:135
+msgid "Swift Sales Page"
 msgstr ""
 
-#: templates/checkout-multi-step.php:28
-msgid "Payment"
+#: includes/frontend/class-swco-fields.php:161
+msgid "Sylhet"
 msgstr ""
 
-#: templates/checkout-multi-step.php:47 templates/checkout-one-column.php:42 templates/checkout-two-column.php:36
-msgid "Have a coupon? Click here to enter your code"
+#: includes/admin/class-swco-admin-menu.php:134
+msgid "Template applied. Previous settings backed up."
 msgstr ""
 
-#: templates/checkout-multi-step.php:62
-msgid "Continue to payment"
+#: includes/admin/class-swco-admin-menu.php:79
+msgid "Templates"
 msgstr ""
 
-#: templates/checkout-multi-step.php:75
-msgid "Back to details"
+#: includes/frontend/class-swco-fields.php:185 includes/frontend/class-swco-fields.php:261
+msgid "Thana / Area"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:33
+msgid "Thana / Area (BD)"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:83
+msgid "Thank you"
+msgstr ""
+
+#: includes/class-swco-settings.php:138 includes/frontend/class-swco-optin.php:95
+msgid "Thanks for subscribing!"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:295
+msgid "Thanks! Your order has been received. We will call you to confirm."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:173
+msgid "The simple solution"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:322
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:340
+msgid "Toggle (collapsed)"
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:172
+msgid "Total"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:304
+msgid "Total:"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:96
+msgid "Two columns"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:289
+msgid "Two columns (form + summary)"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:466
+msgid "Two columns (product + form side by side)"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:168
+msgid "Two lines: what it is, who it is for, and the main promise."
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:131
+msgid "Type"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:354
+msgid "URL param name"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:94
+msgid "Use global layout"
+msgstr ""
+
+#: includes/frontend/class-swco-redirect.php:288 includes/frontend/class-swco-redirect.php:300
+msgid "Use global setting"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:248
+msgid "Used when Redirect to = Custom URL. Invalid URLs are rejected on save."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:440
+msgid "View leads"
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:72
+msgid "Visible"
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:473
+msgid "When filled, the order carries the email and account auto-link works."
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:179
+msgid "Why buy from us?"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:175
+msgid "Why buy this one?"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:141
+msgid "Why you will love it"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:184
+msgid "Yes — check the product first, then pay."
+msgstr ""
+
+#: includes/frontend/class-swco-redirect.php:289
+msgid "Yes — go straight to checkout"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:184
+msgid "Yes — we deliver to all districts of Bangladesh."
+msgstr ""
+
+#: includes/admin/class-swco-admin-menu.php:123 includes/admin/class-swco-admin-menu.php:214
+msgid "You do not have permission to manage checkout settings."
+msgstr ""
+
+#: includes/admin/class-swco-admin-fields.php:48 includes/frontend/class-swco-landing.php:230
+msgid "Your Name"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:167
+msgid "Your Product Headline — Why They Need It"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:138
+msgid "Your Product Name — Limited Offer"
+msgstr ""
+
+#: includes/frontend/class-swco-layout.php:93
+msgid "Your cart is currently empty."
+msgstr ""
+
+#: includes/frontend/class-swco-cart-tweaks.php:109
+msgid "Your cart is empty."
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:186
+msgid "e.g. Mirpur, Savar"
+msgstr ""
+
+#: includes/frontend/class-swco-fields.php:192
+msgid "e.g. Near Central Mosque"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:80
+msgid "— None —"
+msgstr ""
+
+#: includes/frontend/class-swco-landing.php:119 includes/integrations/class-swco-elementor-widgets.php:157
+msgid "— Select product —"
+msgstr ""
+
+#: includes/frontend/class-swco-funnel.php:154
+msgid "— Select —"
 msgstr ""
 

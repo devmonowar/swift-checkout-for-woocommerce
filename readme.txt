@@ -1,5 +1,5 @@
 === Swift Checkout for WooCommerce ===
-Contributors: devmonowar
+Contributors: kstmonowar
 Tags: woocommerce checkout, one page checkout, direct checkout, buy now button, checkout field editor
 Requires at least: 6.8
 Tested up to: 7.1

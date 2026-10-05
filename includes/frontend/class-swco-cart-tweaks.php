@@ -13,6 +13,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+// phpcs:ignoreFile WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- file fires WooCommerce core hooks (required for checkout compatibility).
+
 /**
  * Renders the cart section inside checkout templates.
  */
@@ -157,7 +159,10 @@ final class SwCo_Cart_Tweaks {
 				<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 					<tr class="swco-coupon-row">
 						<th>
-							<?php echo esc_html( sprintf( __( 'Coupon: %s', 'swift-checkout-for-woocommerce' ), $code ) ); ?>
+							<?php
+							/* translators: %s: coupon code */
+							echo esc_html( sprintf( __( 'Coupon: %s', 'swift-checkout-for-woocommerce' ), $code ) );
+							?>
 							<button type="button" class="swco-coupon-remove" data-coupon="<?php echo esc_attr( $code ); ?>" aria-label="<?php echo esc_attr__( 'Remove coupon', 'swift-checkout-for-woocommerce' ); ?>">&times;</button>
 						</th>
 						<td><?php echo wp_kses_post( wc_cart_totals_coupon_html( $coupon ) ); ?></td>

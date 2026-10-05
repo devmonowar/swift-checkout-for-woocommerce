@@ -45,16 +45,3 @@ foreach ( $swco_funnel_ids as $swco_funnel_id ) {
 }
 delete_option( 'swco_funnel_pages' );
 delete_post_meta_by_key( '_swco_steps' );
-
-// Transients (prefixed swco_), if any were set.
-global $wpdb;
-$transients = $wpdb->get_col(
-	$wpdb->prepare(
-		"SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
-		$wpdb->esc_like( '_transient_swco_' ) . '%',
-		$wpdb->esc_like( '_transient_timeout_swco_' ) . '%'
-	)
-);
-foreach ( $transients as $transient ) {
-	delete_option( $transient );
-}

@@ -50,7 +50,7 @@ final class SwCo_Fields {
 	}
 
 	/**
-	 * Apply hide / required / priority to the locked rows.
+	 * Apply hide / required / priority / custom label to the locked rows.
 	 * Our 4 BD fields don't exist in WooCommerce — they are created here.
 	 *
 	 * @param array $fields Checkout fields array.
@@ -87,6 +87,9 @@ final class SwCo_Fields {
 			if ( isset( $row['order'] ) ) {
 				$fields[ $group ][ $key ]['priority'] = absint( $row['order'] );
 			}
+			if ( isset( $row['label'] ) && is_string( $row['label'] ) && '' !== $row['label'] ) {
+				$fields[ $group ][ $key ]['label'] = $row['label'];
+			}
 		}
 
 		self::maybe_replace_bd_state( $fields );
@@ -104,7 +107,7 @@ final class SwCo_Fields {
 	private static function maybe_replace_bd_state( array &$fields ): void {
 		$country = '';
 		if ( isset( $_POST['billing_country'] ) && is_string( $_POST['billing_country'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- display-time country detection.
-			$country = sanitize_text_field( wp_unslash( $_POST['billing_country'] ) );
+			$country = sanitize_text_field( wp_unslash( $_POST['billing_country'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- display-time country detection; value sanitized here.
 		} elseif ( function_exists( 'WC' ) && WC()->customer ) {
 			$country = WC()->customer->get_billing_country();
 		}
@@ -227,6 +230,7 @@ final class SwCo_Fields {
 			return;
 		}
 		$divisions = array( 'Dhaka', 'Chattogram', 'Rajshahi', 'Khulna', 'Barishal', 'Sylhet', 'Rangpur', 'Mymensingh' );
+		// phpcs:disable WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- WooCommerce verifies the checkout nonce; division/district are in_array() whitelisted, thana/landmark sanitized below.
 		if ( isset( $_POST['billing_division'] ) && is_string( $_POST['billing_division'] ) && in_array( wp_unslash( $_POST['billing_division'] ), $divisions, true ) ) {
 			$order->update_meta_data( '_billing_division', wp_unslash( $_POST['billing_division'] ) );
 		}
@@ -239,6 +243,7 @@ final class SwCo_Fields {
 		if ( isset( $_POST['billing_landmark'] ) && is_string( $_POST['billing_landmark'] ) ) {
 			$order->update_meta_data( '_billing_landmark', sanitize_text_field( wp_unslash( $_POST['billing_landmark'] ) ) );
 		}
+		// phpcs:enable WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized.
 	}
 
 	/**

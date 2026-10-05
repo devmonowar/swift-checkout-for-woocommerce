@@ -11,6 +11,7 @@
 			"button_text": "Order Now"
 		},
 		"swco_checkout": {
+			"layout": "two-column",
 			"skin": "dhaka",
 			"delivery_note": "Estimated delivery: Tomorrow by 9 PM - Dhaka",
 			"reviews_text": "10,000+ happy customers in Dhaka",

@@ -149,9 +149,9 @@ final class SwCo_Funnel {
 							<?php
 							wp_dropdown_pages(
 								array(
-									'name'             => 'swco_steps[' . $i . '][page_id]',
+									'name'             => esc_attr( sprintf( 'swco_steps[%d][page_id]', $i ) ),
 									'selected'         => absint( $row['page_id'] ?? 0 ),
-									'show_option_none' => __( '— Select —', 'swift-checkout-for-woocommerce' ),
+									'show_option_none' => __( '— Select —', 'swift-checkout-for-woocommerce' ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_dropdown_pages() escapes its arguments.
 								)
 							);
 							?>

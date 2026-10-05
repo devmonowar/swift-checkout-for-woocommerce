@@ -4,8 +4,8 @@
  * Plugin URI: https://wordpress.org/plugins/swift-checkout-for-woocommerce/
  * Description: Turn the default WooCommerce checkout into a fast, distraction-free, high-converting checkout — skip cart, Buy Now buttons, AJAX cart in checkout, and a field editor lite. No code needed.
  * Version: 1.0.0
- * Author: Monowar Hossain
- * Author URI: https://devmonowar.github.io/
+ * Author: Swift Checkout Team
+ * Author URI: https://wordpress.org/plugins/swift-checkout-for-woocommerce/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: swift-checkout-for-woocommerce
@@ -52,7 +52,7 @@ function swco_boot(): void {
 		return;
 	}
 
-	load_plugin_textdomain( 'swift-checkout-for-woocommerce', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	// Translations load automatically from WordPress.org (no load_plugin_textdomain since WP 4.6).
 
 	SwCo_Plugin::instance()->init();
 }

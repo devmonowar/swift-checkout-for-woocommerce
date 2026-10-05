@@ -1,81 +1,115 @@
 /**
  * Swift Checkout — landing order section styles (scoped, no !important).
+ *
+ * Premium pass: gradient top accent, product hero panel, highlighted total,
+ * tall soft inputs, gradient CTA with press effect, trust microcopy.
  */
 
 .swco-landing {
-	max-width: 560px;
+	position: relative;
+	max-width: 600px;
 	margin: 0 auto;
 	background: #fff;
 	border: 1px solid #e2e8f0;
-	border-radius: 16px;
-	padding: 1.5rem;
-	box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+	border-radius: 20px;
+	padding: 2rem;
+	box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+	overflow: hidden;
 }
 
+.swco-landing::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 6px;
+	background: linear-gradient(90deg, #14b8a6, #0f766e 60%, #115e59);
+}
+
+/* Product hero. */
 .swco-landing-product {
 	display: flex;
-	gap: 1rem;
+	gap: 1.25rem;
 	align-items: center;
-	margin-bottom: 1.25rem;
-	padding-bottom: 1.25rem;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
 	border-bottom: 1px solid #f1f5f9;
 }
 
 .swco-landing-product img {
-	width: 96px;
-	height: 96px;
+	width: 128px;
+	height: 128px;
 	object-fit: cover;
-	border-radius: 12px;
+	border-radius: 16px;
 	border: 1px solid #e2e8f0;
-	box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+	box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+	flex-shrink: 0;
 }
 
 .swco-landing-name {
-	margin: 0 0 0.25rem;
-	font-size: 1.15rem;
+	margin: 0 0 0.35rem;
+	font-size: 1.3rem;
+	font-weight: 800;
+	line-height: 1.3;
 }
 
 .swco-landing-price {
 	margin: 0;
 	font-weight: 700;
 	color: #0f766e;
-	font-size: 1.05rem;
+	font-size: 1.15rem;
 }
 
 .swco-landing-total-wrap {
-	margin: 0.4rem 0 0;
+	margin: 0.6rem 0 0;
 	font-weight: 800;
-	font-size: 1.1rem;
+	font-size: 1.05rem;
+	background: #f0fdfa;
+	border: 1px solid #ccfbf1;
+	border-radius: 10px;
+	padding: 0.5rem 0.75rem;
+	color: #134e4a;
 }
 
+/* Form. */
 .swco-landing-form p {
-	margin-bottom: 1rem;
+	margin-bottom: 1.1rem;
 }
 
 .swco-landing-form label {
 	display: block;
-	margin-bottom: 0.3rem;
-	font-weight: 600;
-	font-size: 0.95rem;
+	margin-bottom: 0.35rem;
+	font-weight: 700;
+	font-size: 0.82rem;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: #475569;
 }
 
 .swco-landing-form input[type="text"],
 .swco-landing-form input[type="tel"],
 .swco-landing-form input[type="email"],
 .swco-landing-form input[type="number"],
-.swco-landing-form textarea {
+.swco-landing-form textarea,
+.swco-landing-form select {
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
-	min-height: 46px;
-	border-radius: 10px;
-	border-color: #cbd5e1;
+	min-height: 50px;
+	border-radius: 12px;
+	border: 1px solid #cbd5e1;
+	background: #f8fafc;
+	padding: 0.6rem 0.9rem;
+	font-size: 1rem;
 }
 
 .swco-landing-form input:focus,
-.swco-landing-form textarea:focus {
+.swco-landing-form textarea:focus,
+.swco-landing-form select:focus {
 	border-color: #0f766e;
-	box-shadow: 0 0 0 3px #f0fdfa;
+	background: #fff;
+	box-shadow: 0 0 0 4px #f0fdfa;
 	outline: none;
 }
 
@@ -84,56 +118,108 @@
 	left: -9999px;
 }
 
+/* CTA. */
 .swco-landing-btn {
 	width: 100%;
-	min-height: 52px;
-	font-size: 1.05rem;
+	min-height: 56px;
+	font-size: 1.1rem;
 	font-weight: 800;
-	border-radius: 12px;
+	letter-spacing: 0.01em;
+	border-radius: 14px;
 	background: linear-gradient(180deg, #14b8a6, #0f766e);
 	border: 1px solid #0f766e;
 	color: #fff;
 	cursor: pointer;
-	box-shadow: 0 3px 10px rgba(15, 118, 110, 0.35);
+	box-shadow: 0 6px 18px rgba(15, 118, 110, 0.4);
+	transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .swco-landing-btn:hover {
 	background: #115e59;
 	border-color: #115e59;
 	color: #fff;
+	box-shadow: 0 8px 22px rgba(15, 118, 110, 0.45);
 }
 
+.swco-landing-btn:active {
+	transform: translateY(2px);
+	box-shadow: 0 2px 8px rgba(15, 118, 110, 0.35);
+}
+
+.swco-landing-assure {
+	text-align: center;
+	font-size: 0.85rem;
+	color: #64748b;
+	margin: 0.75rem 0 0;
+}
+
+/* Result boxes. */
 .swco-landing-success {
-	border: 1px solid currentColor;
-	border-radius: 10px;
-	padding: 1rem 1.25rem;
+	border: 1px solid #6ee7b7;
+	background: #ecfdf5;
+	color: #065f46;
+	border-radius: 12px;
+	padding: 1.25rem 1.5rem;
+	font-size: 1.05rem;
 }
 
 .swco-landing-error {
 	color: #b3261e;
+	background: #fef2f2;
+	border: 1px solid #fecaca;
+	border-radius: 10px;
+	padding: 0.6rem 0.9rem;
 }
 
-/* Two-column: product left, form right (desktop). */
+/* Two-column: product hero panel left, form right (desktop). */
 .swco-landing-two-col {
-	max-width: 880px;
+	max-width: 920px;
 }
 
 @media (min-width: 769px) {
-	.swco-landing-two-col .swco-landing-product,
-	.swco-landing-two-col .swco-landing-form {
-		display: inline-block;
-		vertical-align: top;
+	.swco-landing-two-col {
+		display: flex;
+		gap: 2rem;
+		align-items: flex-start;
 	}
 
 	.swco-landing-two-col .swco-landing-product {
-		width: 38%;
-		margin-right: 4%;
+		flex: 0 0 38%;
+		flex-direction: column;
+		align-items: stretch;
+		text-align: left;
 		margin-bottom: 0;
-		padding-bottom: 0;
-		border-bottom: 0;
+		padding: 1.25rem;
+		border: 1px solid #e2e8f0;
+		border-radius: 16px;
+		background: #f8fafc;
+		position: sticky;
+		top: 1rem;
+	}
+
+	.swco-landing-two-col .swco-landing-product img {
+		width: 100%;
+		height: 240px;
 	}
 
 	.swco-landing-two-col .swco-landing-form {
-		width: 57%;
+		flex: 1;
+		min-width: 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.swco-landing {
+		padding: 1.25rem;
+		border-radius: 16px;
+	}
+
+	.swco-landing-product img {
+		width: 96px;
+		height: 96px;
+	}
+
+	.swco-landing-name {
+		font-size: 1.1rem;
 	}
 }
